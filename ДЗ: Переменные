@@ -1,0 +1,10 @@
+string text; 
+float hp;
+double xp;
+int lvl;
+char classItem;
+string name;
+float rangeShot;
+double chanceToDropItem;
+int count;
+char rarityItem;
