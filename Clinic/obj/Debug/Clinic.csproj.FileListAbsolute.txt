@@ -1,0 +1,8 @@
+C:\Users\Familiy\Documents\GitHub\MixiIJuniorTasks\Clinic\bin\Debug\Clinic.exe.config
+C:\Users\Familiy\Documents\GitHub\MixiIJuniorTasks\Clinic\bin\Debug\Clinic.exe
+C:\Users\Familiy\Documents\GitHub\MixiIJuniorTasks\Clinic\bin\Debug\Clinic.pdb
+C:\Users\Familiy\Documents\GitHub\MixiIJuniorTasks\Clinic\obj\Debug\Clinic.csproj.AssemblyReference.cache
+C:\Users\Familiy\Documents\GitHub\MixiIJuniorTasks\Clinic\obj\Debug\Clinic.csproj.SuggestedBindingRedirects.cache
+C:\Users\Familiy\Documents\GitHub\MixiIJuniorTasks\Clinic\obj\Debug\Clinic.csproj.CoreCompileInputs.cache
+C:\Users\Familiy\Documents\GitHub\MixiIJuniorTasks\Clinic\obj\Debug\Clinic.exe
+C:\Users\Familiy\Documents\GitHub\MixiIJuniorTasks\Clinic\obj\Debug\Clinic.pdb
