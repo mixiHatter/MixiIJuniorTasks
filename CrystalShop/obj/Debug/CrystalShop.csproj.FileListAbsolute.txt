@@ -1,0 +1,8 @@
+C:\Users\Familiy\Documents\GitHub\MixiIJuniorTasks\CrystalShop\bin\Debug\CrystalShop.exe.config
+C:\Users\Familiy\Documents\GitHub\MixiIJuniorTasks\CrystalShop\bin\Debug\CrystalShop.exe
+C:\Users\Familiy\Documents\GitHub\MixiIJuniorTasks\CrystalShop\bin\Debug\CrystalShop.pdb
+C:\Users\Familiy\Documents\GitHub\MixiIJuniorTasks\CrystalShop\obj\Debug\CrystalShop.csproj.AssemblyReference.cache
+C:\Users\Familiy\Documents\GitHub\MixiIJuniorTasks\CrystalShop\obj\Debug\CrystalShop.csproj.SuggestedBindingRedirects.cache
+C:\Users\Familiy\Documents\GitHub\MixiIJuniorTasks\CrystalShop\obj\Debug\CrystalShop.csproj.CoreCompileInputs.cache
+C:\Users\Familiy\Documents\GitHub\MixiIJuniorTasks\CrystalShop\obj\Debug\CrystalShop.exe
+C:\Users\Familiy\Documents\GitHub\MixiIJuniorTasks\CrystalShop\obj\Debug\CrystalShop.pdb
