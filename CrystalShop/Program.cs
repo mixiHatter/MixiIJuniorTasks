@@ -13,6 +13,7 @@ namespace CrystalShop
             int userCoins;
             int crystalPrice = 12;
             int userCrystals;
+            
             Console.Write("Сколько у вас монет: ");
             userCoins = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine($"Здравствуй путник! Цена кристалла {crystalPrice} монет.");
