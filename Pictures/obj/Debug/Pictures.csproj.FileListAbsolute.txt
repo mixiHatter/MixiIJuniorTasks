@@ -1,0 +1,8 @@
+C:\Users\Familiy\Documents\GitHub\MixiIJuniorTasks\Pictures\bin\Debug\Pictures.exe.config
+C:\Users\Familiy\Documents\GitHub\MixiIJuniorTasks\Pictures\bin\Debug\Pictures.exe
+C:\Users\Familiy\Documents\GitHub\MixiIJuniorTasks\Pictures\bin\Debug\Pictures.pdb
+C:\Users\Familiy\Documents\GitHub\MixiIJuniorTasks\Pictures\obj\Debug\Pictures.csproj.AssemblyReference.cache
+C:\Users\Familiy\Documents\GitHub\MixiIJuniorTasks\Pictures\obj\Debug\Pictures.csproj.SuggestedBindingRedirects.cache
+C:\Users\Familiy\Documents\GitHub\MixiIJuniorTasks\Pictures\obj\Debug\Pictures.csproj.CoreCompileInputs.cache
+C:\Users\Familiy\Documents\GitHub\MixiIJuniorTasks\Pictures\obj\Debug\Pictures.exe
+C:\Users\Familiy\Documents\GitHub\MixiIJuniorTasks\Pictures\obj\Debug\Pictures.pdb
