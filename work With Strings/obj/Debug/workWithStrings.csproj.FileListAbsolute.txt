@@ -1,0 +1,8 @@
+C:\Users\Familiy\Documents\GitHub\MixiIJuniorTasks\work With Strings\obj\Debug\workWithStrings.csproj.AssemblyReference.cache
+C:\Users\Familiy\Documents\GitHub\MixiIJuniorTasks\work With Strings\obj\Debug\workWithStrings.csproj.SuggestedBindingRedirects.cache
+C:\Users\Familiy\Documents\GitHub\MixiIJuniorTasks\work With Strings\obj\Debug\workWithStrings.csproj.CoreCompileInputs.cache
+C:\Users\Familiy\Documents\GitHub\MixiIJuniorTasks\work With Strings\bin\Debug\work With Strings.exe.config
+C:\Users\Familiy\Documents\GitHub\MixiIJuniorTasks\work With Strings\bin\Debug\work With Strings.exe
+C:\Users\Familiy\Documents\GitHub\MixiIJuniorTasks\work With Strings\bin\Debug\work With Strings.pdb
+C:\Users\Familiy\Documents\GitHub\MixiIJuniorTasks\work With Strings\obj\Debug\work With Strings.exe
+C:\Users\Familiy\Documents\GitHub\MixiIJuniorTasks\work With Strings\obj\Debug\work With Strings.pdb
