@@ -1,0 +1,8 @@
+C:\Users\Familiy\Documents\GitHub\MixiIJuniorTasks\PracticalCycle\bin\Debug\PracticalCycle.exe.config
+C:\Users\Familiy\Documents\GitHub\MixiIJuniorTasks\PracticalCycle\bin\Debug\PracticalCycle.exe
+C:\Users\Familiy\Documents\GitHub\MixiIJuniorTasks\PracticalCycle\bin\Debug\PracticalCycle.pdb
+C:\Users\Familiy\Documents\GitHub\MixiIJuniorTasks\PracticalCycle\obj\Debug\PracticalCycle.csproj.AssemblyReference.cache
+C:\Users\Familiy\Documents\GitHub\MixiIJuniorTasks\PracticalCycle\obj\Debug\PracticalCycle.csproj.SuggestedBindingRedirects.cache
+C:\Users\Familiy\Documents\GitHub\MixiIJuniorTasks\PracticalCycle\obj\Debug\PracticalCycle.csproj.CoreCompileInputs.cache
+C:\Users\Familiy\Documents\GitHub\MixiIJuniorTasks\PracticalCycle\obj\Debug\PracticalCycle.exe
+C:\Users\Familiy\Documents\GitHub\MixiIJuniorTasks\PracticalCycle\obj\Debug\PracticalCycle.pdb
