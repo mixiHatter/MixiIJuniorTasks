@@ -1,0 +1,8 @@
+C:\Users\Familiy\Documents\GitHub\MixiIJuniorTasks\Sequence\bin\Debug\Sequence.exe.config
+C:\Users\Familiy\Documents\GitHub\MixiIJuniorTasks\Sequence\bin\Debug\Sequence.exe
+C:\Users\Familiy\Documents\GitHub\MixiIJuniorTasks\Sequence\bin\Debug\Sequence.pdb
+C:\Users\Familiy\Documents\GitHub\MixiIJuniorTasks\Sequence\obj\Debug\Sequence.csproj.AssemblyReference.cache
+C:\Users\Familiy\Documents\GitHub\MixiIJuniorTasks\Sequence\obj\Debug\Sequence.csproj.SuggestedBindingRedirects.cache
+C:\Users\Familiy\Documents\GitHub\MixiIJuniorTasks\Sequence\obj\Debug\Sequence.csproj.CoreCompileInputs.cache
+C:\Users\Familiy\Documents\GitHub\MixiIJuniorTasks\Sequence\obj\Debug\Sequence.exe
+C:\Users\Familiy\Documents\GitHub\MixiIJuniorTasks\Sequence\obj\Debug\Sequence.pdb
