@@ -6,11 +6,16 @@ namespace ControlExit
     {
         static void Main(string[] args)
         {
-            string userText = "None";
+            string userText;
+            string programmExit = "exit";
 
-            while(userText != "exit")
+            Console.WriteLine($"Для выхода нужно ввести {programmExit}");
+            Console.Write("Введите текст: ");
+            userText = Console.ReadLine();
+            while (userText != programmExit)
             {
-                Console.WriteLine("work");
+                Console.WriteLine(userText);
+                Console.Write("Введите текст: ");
                 userText = Console.ReadLine();
             }
         }
