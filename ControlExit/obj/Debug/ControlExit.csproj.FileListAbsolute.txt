@@ -1,0 +1,8 @@
+C:\Users\Familiy\Documents\GitHub\MixiIJuniorTasks\ControlExit\obj\Debug\ControlExit.csproj.AssemblyReference.cache
+C:\Users\Familiy\Documents\GitHub\MixiIJuniorTasks\ControlExit\obj\Debug\ControlExit.csproj.SuggestedBindingRedirects.cache
+C:\Users\Familiy\Documents\GitHub\MixiIJuniorTasks\ControlExit\obj\Debug\ControlExit.csproj.CoreCompileInputs.cache
+C:\Users\Familiy\Documents\GitHub\MixiIJuniorTasks\ControlExit\bin\Debug\ControlExit.exe.config
+C:\Users\Familiy\Documents\GitHub\MixiIJuniorTasks\ControlExit\bin\Debug\ControlExit.exe
+C:\Users\Familiy\Documents\GitHub\MixiIJuniorTasks\ControlExit\bin\Debug\ControlExit.pdb
+C:\Users\Familiy\Documents\GitHub\MixiIJuniorTasks\ControlExit\obj\Debug\ControlExit.exe
+C:\Users\Familiy\Documents\GitHub\MixiIJuniorTasks\ControlExit\obj\Debug\ControlExit.pdb
