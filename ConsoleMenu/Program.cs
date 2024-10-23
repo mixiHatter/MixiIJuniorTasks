@@ -7,11 +7,13 @@ namespace ConsoleMenu
         static void Main(string[] args)
         {
             bool isWork = true;
+            
             const string CommandEchoText = "1";
             const string CommandSecretText = "2";
             const string CommandRandomNumber = "3";
             const string CommandClearConsole = "4";
             const string CommandExitProgramm = "5";
+            
             string userText;
             string userTextEcho;
             Random random = new Random();
