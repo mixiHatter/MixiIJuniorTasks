@@ -37,21 +37,26 @@ namespace ConsoleMenu
                         userTextEcho = Console.ReadLine();
                         Console.WriteLine(userTextEcho);
                         break;
+                        
                     case CommandSecretText:
                         Console.Clear();
                         Console.WriteLine("\"Компилятору все равно, как написан код. \r\nЕму не нужна мудрость в глазах кодера, чтобы всё это понять.\"\r\n@Почти В.Цой");
                         Console.ReadKey();
                         break;
+                        
                     case CommandRandomNumber:
                         randomNumber = random.Next(1, 101);
                         Console.WriteLine(randomNumber);
                         break;
+                        
                     case CommandClearConsole:
                         Console.Clear();
                         break;
+                        
                     case CommandExitProgramm:
                         isWork = false;
                         break;
+                        
                     default:
                         Console.WriteLine("Команда не распознана.");
                         break;
