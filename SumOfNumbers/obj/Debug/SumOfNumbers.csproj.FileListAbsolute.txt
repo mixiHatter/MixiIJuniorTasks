@@ -1,0 +1,8 @@
+C:\Users\Familiy\Documents\GitHub\MixiIJuniorTasks\SumOfNumbers\bin\Debug\SumOfNumbers.exe.config
+C:\Users\Familiy\Documents\GitHub\MixiIJuniorTasks\SumOfNumbers\bin\Debug\SumOfNumbers.exe
+C:\Users\Familiy\Documents\GitHub\MixiIJuniorTasks\SumOfNumbers\bin\Debug\SumOfNumbers.pdb
+C:\Users\Familiy\Documents\GitHub\MixiIJuniorTasks\SumOfNumbers\obj\Debug\SumOfNumbers.csproj.AssemblyReference.cache
+C:\Users\Familiy\Documents\GitHub\MixiIJuniorTasks\SumOfNumbers\obj\Debug\SumOfNumbers.csproj.SuggestedBindingRedirects.cache
+C:\Users\Familiy\Documents\GitHub\MixiIJuniorTasks\SumOfNumbers\obj\Debug\SumOfNumbers.csproj.CoreCompileInputs.cache
+C:\Users\Familiy\Documents\GitHub\MixiIJuniorTasks\SumOfNumbers\obj\Debug\SumOfNumbers.exe
+C:\Users\Familiy\Documents\GitHub\MixiIJuniorTasks\SumOfNumbers\obj\Debug\SumOfNumbers.pdb
