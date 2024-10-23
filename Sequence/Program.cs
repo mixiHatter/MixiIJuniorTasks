@@ -6,7 +6,11 @@ namespace Sequence
     {
         static void Main(string[] args)
         {
-            for (int i = 5; i <= 103; i += 7) // цикл for позволяет устанавливать стартовое значение, условие и шаг, что идеально подходит к задаче
+            int startNumber = 5;
+            int maxNumber = 103;
+            int stepNumber = 7;
+
+            for (int i = startNumber; i <= maxNumber; i += stepNumber) // цикл for позволяет устанавливать стартовое значение, условие и шаг, что идеально подходит к задаче
             {
                 Console.WriteLine(i);
             }
