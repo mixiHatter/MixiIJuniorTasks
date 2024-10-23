@@ -1,0 +1,8 @@
+C:\Users\Familiy\Documents\GitHub\MixiIJuniorTasks\ConsoleMenu\bin\Debug\ConsoleMenu.exe.config
+C:\Users\Familiy\Documents\GitHub\MixiIJuniorTasks\ConsoleMenu\bin\Debug\ConsoleMenu.exe
+C:\Users\Familiy\Documents\GitHub\MixiIJuniorTasks\ConsoleMenu\bin\Debug\ConsoleMenu.pdb
+C:\Users\Familiy\Documents\GitHub\MixiIJuniorTasks\ConsoleMenu\obj\Debug\ConsoleMenu.csproj.AssemblyReference.cache
+C:\Users\Familiy\Documents\GitHub\MixiIJuniorTasks\ConsoleMenu\obj\Debug\ConsoleMenu.csproj.SuggestedBindingRedirects.cache
+C:\Users\Familiy\Documents\GitHub\MixiIJuniorTasks\ConsoleMenu\obj\Debug\ConsoleMenu.csproj.CoreCompileInputs.cache
+C:\Users\Familiy\Documents\GitHub\MixiIJuniorTasks\ConsoleMenu\obj\Debug\ConsoleMenu.exe
+C:\Users\Familiy\Documents\GitHub\MixiIJuniorTasks\ConsoleMenu\obj\Debug\ConsoleMenu.pdb
