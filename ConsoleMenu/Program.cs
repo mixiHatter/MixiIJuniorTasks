@@ -17,6 +17,8 @@ namespace ConsoleMenu
             string userText;
             string userTextEcho;
             Random random = new Random();
+            int minRandom = 1;
+            int maxRandom = 101;
             int randomNumber;
 
             while (isWork)
@@ -45,7 +47,7 @@ namespace ConsoleMenu
                         break;
                         
                     case CommandRandomNumber:
-                        randomNumber = random.Next(1, 101);
+                        randomNumber = random.Next(minRandom, maxRandom);
                         Console.WriteLine(randomNumber);
                         break;
                         
