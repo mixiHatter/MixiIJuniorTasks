@@ -46,7 +46,7 @@ namespace CurrencyConverter
                     $"\nДля выхода из программы введите - {CommandExit}") ;
 
                 Console.Write("\nВведите команду:");
-                userCommand = Convert.ToString(Console.ReadLine());
+                userCommand = Console.ReadLine();
 
                 switch(userCommand)
                 {
@@ -54,7 +54,7 @@ namespace CurrencyConverter
                         Console.Write("Сколько рублей вы хотите конвертировать в доллары:");
                         userAmountToConvert = Convert.ToDouble(Console.ReadLine());
                         
-                        if(userWalletRubles - userAmountToConvert >= 0)
+                        if(userWalletRubles >= userAmountToConvert)
                         {
                             userWalletRubles -=userAmountToConvert;
                             userWalletDollars += userAmountToConvert * ratioDollarToRuble;
@@ -69,7 +69,7 @@ namespace CurrencyConverter
                         Console.Write("Сколько долларов вы хотите конвертировать в рубли:");
                         userAmountToConvert = Convert.ToDouble(Console.ReadLine());
 
-                        if (userWalletDollars - userAmountToConvert >= 0)
+                        if (userWalletDollars >= userAmountToConvert)
                         {
                             userWalletDollars -= userAmountToConvert;
                             userWalletRubles += userAmountToConvert * ratioRubleToDollar;
@@ -84,7 +84,7 @@ namespace CurrencyConverter
                         Console.Write("Сколько рублей вы хотите конвертировать в евро:");
                         userAmountToConvert = Convert.ToDouble(Console.ReadLine());
 
-                        if (userWalletRubles - userAmountToConvert >= 0)
+                        if (userWalletRubles >= userAmountToConvert)
                         {
                             userWalletRubles -= userAmountToConvert;
                             userWalletEuros += userAmountToConvert * ratioEuroToRuble;
@@ -99,7 +99,7 @@ namespace CurrencyConverter
                         Console.Write("Сколько евро вы хотите конвертировать в рубли:");
                         userAmountToConvert = Convert.ToDouble(Console.ReadLine());
 
-                        if (userWalletEuros - userAmountToConvert >= 0)
+                        if (userWalletEuros >= userAmountToConvert)
                         {
                             userWalletEuros -= userAmountToConvert;
                             userWalletRubles += userAmountToConvert * ratioRubleToEuro;
@@ -114,7 +114,7 @@ namespace CurrencyConverter
                         Console.Write("Сколько евро вы хотите конвертировать в доллары:");
                         userAmountToConvert = Convert.ToDouble(Console.ReadLine());
 
-                        if (userWalletEuros - userAmountToConvert >= 0)
+                        if (userWalletEuros >= userAmountToConvert)
                         {
                             userWalletEuros -= userAmountToConvert;
                             userWalletDollars += userAmountToConvert * ratioEuroToDollar;
@@ -129,7 +129,7 @@ namespace CurrencyConverter
                         Console.Write("Сколько долларов вы хотите конвертировать в евро:");
                         userAmountToConvert = Convert.ToDouble(Console.ReadLine());
 
-                        if (userWalletDollars - userAmountToConvert >= 0)
+                        if (userWalletDollars >= userAmountToConvert)
                         {
                             userWalletDollars -= userAmountToConvert;
                             userWalletEuros += userAmountToConvert * ratioDollarToEuro;
