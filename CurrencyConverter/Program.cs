@@ -22,9 +22,12 @@ namespace CurrencyConverter
             double userWalletDollars = 1000.0;
             double userWalletEuros = 1000.0;
 
-            double ratioRubleAndDollar = 96.64;
-            double ratioRubleAndEuro = 104.38;
-            double ratioEuroAndDollar = 1.08;
+            double ratioRubleToDollar = 96.67;
+            double ratioDollarToRuble = 0.010345;
+            double ratioRubleToEuro = 104.81;
+            double ratioEuroToRuble = 0.009541;
+            double ratioEuroToDollar = 1.08;
+            double ratioDollarToEuro = 0.92629;
 
             double userAmountToConvert;
 
@@ -54,7 +57,7 @@ namespace CurrencyConverter
                         if(userWalletRubles - userAmountToConvert >= 0)
                         {
                             userWalletRubles -=userAmountToConvert;
-                            userWalletDollars += userAmountToConvert / ratioRubleAndDollar;
+                            userWalletDollars += userAmountToConvert * ratioDollarToRuble;
                         }
                         else
                         {
@@ -69,7 +72,7 @@ namespace CurrencyConverter
                         if (userWalletDollars - userAmountToConvert >= 0)
                         {
                             userWalletDollars -= userAmountToConvert;
-                            userWalletRubles += userAmountToConvert * ratioRubleAndDollar;
+                            userWalletRubles += userAmountToConvert * ratioRubleToDollar;
                         }
                         else
                         {
@@ -84,7 +87,7 @@ namespace CurrencyConverter
                         if (userWalletRubles - userAmountToConvert >= 0)
                         {
                             userWalletRubles -= userAmountToConvert;
-                            userWalletEuros += userAmountToConvert / ratioRubleAndEuro;
+                            userWalletEuros += userAmountToConvert * ratioEuroToRuble;
                         }
                         else
                         {
@@ -99,7 +102,7 @@ namespace CurrencyConverter
                         if (userWalletEuros - userAmountToConvert >= 0)
                         {
                             userWalletEuros -= userAmountToConvert;
-                            userWalletRubles += userAmountToConvert * ratioRubleAndEuro;
+                            userWalletRubles += userAmountToConvert * ratioRubleToEuro;
                         }
                         else
                         {
@@ -114,7 +117,7 @@ namespace CurrencyConverter
                         if (userWalletEuros - userAmountToConvert >= 0)
                         {
                             userWalletEuros -= userAmountToConvert;
-                            userWalletDollars += userAmountToConvert * ratioEuroAndDollar;
+                            userWalletDollars += userAmountToConvert * ratioEuroToDollar;
                         }
                         else
                         {
@@ -129,7 +132,7 @@ namespace CurrencyConverter
                         if (userWalletDollars - userAmountToConvert >= 0)
                         {
                             userWalletDollars -= userAmountToConvert;
-                            userWalletEuros += userAmountToConvert / ratioEuroAndDollar;
+                            userWalletEuros += userAmountToConvert * ratioDollarToEuro;
                         }
                         else
                         {
