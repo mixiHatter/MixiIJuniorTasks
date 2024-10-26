@@ -7,9 +7,6 @@ namespace CurrencyConverter
     {
         static void Main(string[] args)
         {
-            bool isWork = true;
-            string userCommand;
-
             const string CommandConvertRubleToDollar = "1";
             const string CommandConvertDollarToRuble = "2";
             const string CommandConvertRubleToEuro = "3";
@@ -17,6 +14,9 @@ namespace CurrencyConverter
             const string CommandConvertEuroToDollar = "5";
             const string CommandConvertDollarToEuro = "6";
             const string CommandExit = "7";
+            
+            bool isWork = true;
+            string userCommand;
 
             double userWalletRubles = 1000.0;
             double userWalletDollars = 1000.0;
@@ -59,7 +59,6 @@ namespace CurrencyConverter
                         else
                         {
                             Console.WriteLine("На вашем балансе недостаточно средств.");
-                            break;
                         }
                         break;
 
@@ -75,7 +74,6 @@ namespace CurrencyConverter
                         else
                         {
                             Console.WriteLine("На вашем балансе недостаточно средств.");
-                            break;
                         }
                         break;
 
@@ -91,7 +89,6 @@ namespace CurrencyConverter
                         else
                         {
                             Console.WriteLine("На вашем балансе недостаточно средств.");
-                            break;
                         }
                         break;
 
@@ -107,7 +104,6 @@ namespace CurrencyConverter
                         else
                         {
                             Console.WriteLine("На вашем балансе недостаточно средств.");
-                            break;
                         }
                         break;
 
@@ -123,7 +119,6 @@ namespace CurrencyConverter
                         else
                         {
                             Console.WriteLine("На вашем балансе недостаточно средств.");
-                            break;
                         }
                         break;
 
@@ -139,7 +134,6 @@ namespace CurrencyConverter
                         else
                         {
                             Console.WriteLine("На вашем балансе недостаточно средств.");
-                            break;
                         }
                         break;
 
