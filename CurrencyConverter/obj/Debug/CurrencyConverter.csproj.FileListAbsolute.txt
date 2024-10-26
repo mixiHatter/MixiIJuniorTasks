@@ -1,0 +1,8 @@
+C:\Users\Familiy\Documents\GitHub\MixiIJuniorTasks\CurrencyConverter\bin\Debug\CurrencyConverter.exe.config
+C:\Users\Familiy\Documents\GitHub\MixiIJuniorTasks\CurrencyConverter\bin\Debug\CurrencyConverter.exe
+C:\Users\Familiy\Documents\GitHub\MixiIJuniorTasks\CurrencyConverter\bin\Debug\CurrencyConverter.pdb
+C:\Users\Familiy\Documents\GitHub\MixiIJuniorTasks\CurrencyConverter\obj\Debug\CurrencyConverter.csproj.AssemblyReference.cache
+C:\Users\Familiy\Documents\GitHub\MixiIJuniorTasks\CurrencyConverter\obj\Debug\CurrencyConverter.csproj.SuggestedBindingRedirects.cache
+C:\Users\Familiy\Documents\GitHub\MixiIJuniorTasks\CurrencyConverter\obj\Debug\CurrencyConverter.csproj.CoreCompileInputs.cache
+C:\Users\Familiy\Documents\GitHub\MixiIJuniorTasks\CurrencyConverter\obj\Debug\CurrencyConverter.exe
+C:\Users\Familiy\Documents\GitHub\MixiIJuniorTasks\CurrencyConverter\obj\Debug\CurrencyConverter.pdb
