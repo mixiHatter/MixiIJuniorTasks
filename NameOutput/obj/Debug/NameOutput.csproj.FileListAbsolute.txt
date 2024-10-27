@@ -1,0 +1,8 @@
+C:\Users\Familiy\Documents\GitHub\MixiIJuniorTasks\NameOutput\bin\Debug\NameOutput.exe.config
+C:\Users\Familiy\Documents\GitHub\MixiIJuniorTasks\NameOutput\bin\Debug\NameOutput.exe
+C:\Users\Familiy\Documents\GitHub\MixiIJuniorTasks\NameOutput\bin\Debug\NameOutput.pdb
+C:\Users\Familiy\Documents\GitHub\MixiIJuniorTasks\NameOutput\obj\Debug\NameOutput.csproj.AssemblyReference.cache
+C:\Users\Familiy\Documents\GitHub\MixiIJuniorTasks\NameOutput\obj\Debug\NameOutput.csproj.SuggestedBindingRedirects.cache
+C:\Users\Familiy\Documents\GitHub\MixiIJuniorTasks\NameOutput\obj\Debug\NameOutput.csproj.CoreCompileInputs.cache
+C:\Users\Familiy\Documents\GitHub\MixiIJuniorTasks\NameOutput\obj\Debug\NameOutput.exe
+C:\Users\Familiy\Documents\GitHub\MixiIJuniorTasks\NameOutput\obj\Debug\NameOutput.pdb
