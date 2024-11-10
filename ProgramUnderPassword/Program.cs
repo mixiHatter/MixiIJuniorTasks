@@ -6,32 +6,25 @@ namespace ProgramUnderPassword
     {
         static void Main(string[] args)
         {
-            bool isWork = true;
             string password = "qwerty123";
             string secretText = "U are the best";
             string userText;
-            int tryCount = 3;
+            int tryCount = 2;
 
-            while (isWork)
+            for (int i = tryCount; i >= 0; i--)
             {
                 Console.Write("Введите пароль: ");
                 userText = Console.ReadLine();
 
-                if(userText == password)
+                if (userText == password)
                 {
                     Console.WriteLine(secretText);
-                    break;
-                }
-                else if (tryCount <= 1)
-                {
-                    isWork = false;
+                    Console.ReadKey();
                     break;
                 }
                 else
                 {
-                    Console.WriteLine("Пароль неверный!");
-                    Console.WriteLine($"У вас осталось {tryCount - 1} попыток");
-                    tryCount--;
+                    Console.WriteLine("Пароль не верный!");
                 }
             }
         }
