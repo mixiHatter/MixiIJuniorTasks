@@ -1,5 +1,4 @@
-﻿using System;
-using System.Linq.Expressions;
+using System;
 
 namespace NameOutput
 {
@@ -8,6 +7,7 @@ namespace NameOutput
         static void Main(string[] args)
         {
             string symbol;
+            string middleLine = "";
             string symbols = "";
             string name;
 
@@ -16,12 +16,14 @@ namespace NameOutput
             Console.Write("Введите имя: ");
             name = Console.ReadLine();
 
-            for(int i = 0; i < name.Length + 2; i++)
+            middleLine = symbol + name + symbol;
+
+            for(int i = 0; i < middleLine.Length; i++)
             {
                 symbols += symbol;
             }
 
-            Console.WriteLine($"{symbols}\n{symbol}{name}{symbol}\n{symbols}");
+            Console.WriteLine($"{symbols}\n{middleLine}\n{symbols}");
         }
     }
-}
+} 
