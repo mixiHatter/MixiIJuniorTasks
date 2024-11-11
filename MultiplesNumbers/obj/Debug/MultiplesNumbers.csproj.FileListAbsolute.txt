@@ -1,0 +1,8 @@
+C:\Users\Familiy\Documents\GitHub\MixiIJuniorTasks\MultiplesNumbers\bin\Debug\MultiplesNumbers.exe.config
+C:\Users\Familiy\Documents\GitHub\MixiIJuniorTasks\MultiplesNumbers\bin\Debug\MultiplesNumbers.exe
+C:\Users\Familiy\Documents\GitHub\MixiIJuniorTasks\MultiplesNumbers\bin\Debug\MultiplesNumbers.pdb
+C:\Users\Familiy\Documents\GitHub\MixiIJuniorTasks\MultiplesNumbers\obj\Debug\MultiplesNumbers.csproj.AssemblyReference.cache
+C:\Users\Familiy\Documents\GitHub\MixiIJuniorTasks\MultiplesNumbers\obj\Debug\MultiplesNumbers.csproj.SuggestedBindingRedirects.cache
+C:\Users\Familiy\Documents\GitHub\MixiIJuniorTasks\MultiplesNumbers\obj\Debug\MultiplesNumbers.csproj.CoreCompileInputs.cache
+C:\Users\Familiy\Documents\GitHub\MixiIJuniorTasks\MultiplesNumbers\obj\Debug\MultiplesNumbers.exe
+C:\Users\Familiy\Documents\GitHub\MixiIJuniorTasks\MultiplesNumbers\obj\Debug\MultiplesNumbers.pdb
