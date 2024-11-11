@@ -7,7 +7,9 @@ namespace DegreeTwo
         static void Main(string[] args)
         {
             Random random = new Random();
-            int number = random.Next(1, 150);
+            int minRandom = 1;
+            int maxRandom = 150;
+            int number = random.Next(minRandom, maxRandom);
             int numberDegree = 2;
             int degree = 1;
 

@@ -7,7 +7,9 @@ namespace MultiplesNumbers
         static void Main(string[] args)
         {
             Random random = new Random();
-            int number = random.Next(10, 26);
+            int minRandom = 10;
+            int maxRandom = 26;
+            int number = random.Next(minRandom, maxRandom);
             int minRange = 50;
             int maxRange = 150;
             int countMultiples = 0;
