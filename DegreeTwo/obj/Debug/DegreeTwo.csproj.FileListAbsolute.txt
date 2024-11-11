@@ -1,0 +1,8 @@
+C:\Users\Familiy\Documents\GitHub\MixiIJuniorTasks\DegreeTwo\bin\Debug\DegreeTwo.exe.config
+C:\Users\Familiy\Documents\GitHub\MixiIJuniorTasks\DegreeTwo\bin\Debug\DegreeTwo.exe
+C:\Users\Familiy\Documents\GitHub\MixiIJuniorTasks\DegreeTwo\bin\Debug\DegreeTwo.pdb
+C:\Users\Familiy\Documents\GitHub\MixiIJuniorTasks\DegreeTwo\obj\Debug\DegreeTwo.csproj.AssemblyReference.cache
+C:\Users\Familiy\Documents\GitHub\MixiIJuniorTasks\DegreeTwo\obj\Debug\DegreeTwo.csproj.SuggestedBindingRedirects.cache
+C:\Users\Familiy\Documents\GitHub\MixiIJuniorTasks\DegreeTwo\obj\Debug\DegreeTwo.csproj.CoreCompileInputs.cache
+C:\Users\Familiy\Documents\GitHub\MixiIJuniorTasks\DegreeTwo\obj\Debug\DegreeTwo.exe
+C:\Users\Familiy\Documents\GitHub\MixiIJuniorTasks\DegreeTwo\obj\Debug\DegreeTwo.pdb
