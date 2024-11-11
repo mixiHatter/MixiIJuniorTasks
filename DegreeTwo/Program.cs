@@ -18,6 +18,7 @@ namespace DegreeTwo
                 numberDegree += numberDegree;
                 degree++;
             }
+            
             Console.WriteLine($"{number} > {numberDegree}, which is 2 to the power of {degree}");
         }
     }
