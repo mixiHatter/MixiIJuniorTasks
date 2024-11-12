@@ -13,29 +13,30 @@ namespace BattleWithBoss
             const string CommandSurrender = "5";
 
             bool isWork = true;
-            bool explosionCharge = false;
-            string userCommand;
-            string playerName;
-            string enemyName = "Boss";
             Random random = new Random();
+            string userCommand;
+            
+            string playerName;
             int playerBaseAttack;
             int playerMinBaseAttack = 15;
             int playerMaxBaseAttack = 25;
-            int fireBallAttack = 50;
-            int fireBallMana = 50;
-            int explosionAttack = 85;
-            int regerationCount = 1;
-
-            int enemyBaseAttack;
-            int enemyMinBaseAttack = 10;
-            int enemyMaxBaseAttack = 20;
             int playerMaxHP = 100;
             int playerHP = 100;
             int playerMaxMana = 100;
             int playerMana = 100;
-            int enemyHP = 250;
             
-
+            int fireBallAttack = 50;
+            int fireBallMana = 50;
+            bool explosionCharge = false;
+            int explosionAttack = 85;
+            int regerationCount = 1;
+            
+            string enemyName = "Boss";
+            int enemyHP = 250;
+            int enemyBaseAttack;
+            int enemyMinBaseAttack = 10;
+            int enemyMaxBaseAttack = 20;
+            
             Console.Write("Input player name: ");
             playerName = Console.ReadLine();
 
@@ -51,25 +52,6 @@ namespace BattleWithBoss
                 Console.WriteLine(enemyName);
                 Console.SetCursorPosition(70, 1);
                 Console.WriteLine($"{enemyHP} HP");
-
-                Console.SetCursorPosition(35, 2);
-                Console.WriteLine($"Base attack - {CommandBaseAttack}");
-                Console.SetCursorPosition(35, 3);
-                Console.WriteLine($"Fire ball - {CommandFireBall}");
-                Console.SetCursorPosition(35, 4);
-                
-                if(explosionCharge == true)
-                {
-                    Console.WriteLine($"Explosion - {CommandExplosion} |CHARGED!|");
-                }
-                else
-                {
-                    Console.WriteLine($"Explosion - {CommandExplosion} |UNCHARGED!|");
-                }
-                Console.SetCursorPosition(35, 5);
-                Console.WriteLine($"Regeneration HP and mana - {CommandRegeneration} |{regerationCount} charges|");
-                Console.SetCursorPosition(35, 6);
-                Console.WriteLine($"Surrender - {CommandSurrender}");
 
                 if(playerHP <= 0 && enemyHP <= 0)
                 {
@@ -92,6 +74,27 @@ namespace BattleWithBoss
                     isWork = false;
                     break;
                 }
+
+                
+                Console.SetCursorPosition(35, 2);
+                Console.WriteLine($"Base attack - {CommandBaseAttack}");
+                Console.SetCursorPosition(35, 3);
+                Console.WriteLine($"Fire ball - {CommandFireBall}");
+                Console.SetCursorPosition(35, 4);
+                
+                if(explosionCharge == true)
+                {
+                    Console.WriteLine($"Explosion - {CommandExplosion} |CHARGED!|");
+                }
+                else
+                {
+                    Console.WriteLine($"Explosion - {CommandExplosion} |UNCHARGED!|");
+                }
+                
+                Console.SetCursorPosition(35, 5);
+                Console.WriteLine($"Regeneration HP and mana - {CommandRegeneration} |{regerationCount} charges|");
+                Console.SetCursorPosition(35, 6);
+                Console.WriteLine($"Surrender - {CommandSurrender}");
 
                 Console.Write("Input command: ");
                 userCommand = Convert.ToString(Console.ReadLine());
