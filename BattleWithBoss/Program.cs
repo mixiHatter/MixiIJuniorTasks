@@ -27,7 +27,7 @@ namespace BattleWithBoss
             
             int fireBallAttack = 50;
             int fireBallMana = 50;
-            bool explosionCharge = false;
+            bool canExplosionCharge = false;
             int explosionAttack = 85;
             int regerationCount = 1;
             
@@ -59,7 +59,7 @@ namespace BattleWithBoss
                 Console.WriteLine($"Fire ball - {CommandFireBall}");
                 Console.SetCursorPosition(35, 4);
                 
-                if(explosionCharge == true)
+                if(canExplosionCharge == true)
                 {
                     Console.WriteLine($"Explosion - {CommandExplosion} |CHARGED!|");
                 }
@@ -111,14 +111,14 @@ namespace BattleWithBoss
                             Console.ReadKey();
                         }
 
-                        explosionCharge = true;
+                        canExplosionCharge = true;
                         break;
 
                     case CommandExplosion:
-                        if(explosionCharge == true)
+                        if(canExplosionCharge == true)
                         {
                             enemyHP -= explosionAttack;
-                            explosionCharge = false;
+                            canExplosionCharge = false;
                             Console.WriteLine($"{playerName} use explosion!, {enemyName} get -{explosionAttack}HP");
 
                             enemyBaseAttack = random.Next(enemyMinBaseAttack, enemyMaxBaseAttack);
