@@ -43,7 +43,7 @@ namespace BattleWithBoss
             while (isWork)
             {
                 Console.Clear();
-                Console.SetCursorPosition(0,0); // 0 - right, 1 - down
+                Console.SetCursorPosition(0,0);
                 Console.WriteLine(playerName);
                 Console.SetCursorPosition(0, 1);
                 Console.WriteLine($"{playerHP} HP | {playerMana} Mana");
