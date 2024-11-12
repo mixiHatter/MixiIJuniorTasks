@@ -53,29 +53,6 @@ namespace BattleWithBoss
                 Console.SetCursorPosition(70, 1);
                 Console.WriteLine($"{enemyHP} HP");
 
-                if(playerHP <= 0 && enemyHP <= 0)
-                {
-                    Console.WriteLine("DRAW");
-                    Console.ReadKey();
-                    isWork = false;
-                    break;
-                }
-                else if (playerHP <= 0)
-                {
-                    Console.WriteLine($"{playerName} died\nGAME OVER");
-                    Console.ReadKey();
-                    isWork = false;
-                    break;
-                }
-                else if (enemyHP <= 0)
-                {
-                    Console.WriteLine($"{enemyName} died\n{playerName} WIN!!!");
-                    Console.ReadKey();
-                    isWork = false;
-                    break;
-                }
-
-                
                 Console.SetCursorPosition(35, 2);
                 Console.WriteLine($"Base attack - {CommandBaseAttack}");
                 Console.SetCursorPosition(35, 3);
@@ -133,6 +110,7 @@ namespace BattleWithBoss
                             Console.WriteLine($"{enemyName} use base attack, {playerName} get -{enemyBaseAttack}HP");
                             Console.ReadKey();
                         }
+
                         explosionCharge = true;
                         break;
 
@@ -183,7 +161,6 @@ namespace BattleWithBoss
                             Console.WriteLine($"{enemyName} use base attack, {playerName} get -{enemyBaseAttack}HP");
                             Console.ReadKey();
                         }
-                        
                         break;
 
                     case CommandSurrender:
@@ -196,6 +173,32 @@ namespace BattleWithBoss
                         Console.WriteLine("The command was not found");
                         Console.ReadKey();
                         break;
+
+                }
+
+                if (playerHP <= 0 && enemyHP <= 0)
+                {
+                    Console.Clear();
+                    Console.WriteLine("DRAW");
+                    Console.ReadKey();
+                    isWork = false;
+                    break;
+                }
+                else if (playerHP <= 0)
+                {
+                    Console.Clear();
+                    Console.WriteLine($"{playerName} died\nGAME OVER");
+                    Console.ReadKey();
+                    isWork = false;
+                    break;
+                }
+                else if (enemyHP <= 0)
+                {
+                    Console.Clear();
+                    Console.WriteLine($"{enemyName} died\n{playerName} WIN!!!");
+                    Console.ReadKey();
+                    isWork = false;
+                    break;
                 }
             }
         }
