@@ -15,9 +15,6 @@ namespace BattleWithBoss
             bool isWork = true;
             Random random = new Random();
             string userCommand;
-            bool isPlayerWin = false;
-            bool isEnemyWin = false;
-            bool isDraw = false;
             
             string playerName;
             int playerBaseAttack;
@@ -179,39 +176,26 @@ namespace BattleWithBoss
 
                 }
 
-                if (playerHP <= 0 && enemyHP <= 0)
+                if (playerHP <= 0 || enemyHP <= 0)
                 {
-                    isDraw = true;
-                    isWork = false;
-                    break;
-                }
-                else if (playerHP <= 0)
-                {
-                    isEnemyWin = true;
-                    isWork = false;
-                    break;
-                }
-                else if (enemyHP <= 0)
-                {
-                    isPlayerWin = true;
                     isWork = false;
                     break;
                 }
             }
 
-            if (isDraw)
+            if (playerHP <= 0 && enemyHP <= 0)
             {
                 Console.Clear();
                 Console.WriteLine($"{playerName} and {enemyName} dead\nDRAW");
                 Console.ReadKey();
             }
-            else if (isPlayerWin)
+            else if (enemyHP <= 0)
             {
                 Console.Clear();
                 Console.WriteLine($"{enemyName} died\n{playerName} WIN!!!");
                 Console.ReadKey();
             }
-            else if (isEnemyWin)
+            else if (playerHP <= 0)
             {
                 Console.Clear();
                 Console.WriteLine($"{playerName} died\nGAME OVER");
