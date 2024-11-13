@@ -15,6 +15,9 @@ namespace BattleWithBoss
             bool isWork = true;
             Random random = new Random();
             string userCommand;
+            bool isPlayerWin = false;
+            bool isEnemyWin = false;
+            bool isDraw = false;
             
             string playerName;
             int playerBaseAttack;
@@ -178,28 +181,47 @@ namespace BattleWithBoss
 
                 if (playerHP <= 0 && enemyHP <= 0)
                 {
-                    Console.Clear();
-                    Console.WriteLine("DRAW");
-                    Console.ReadKey();
+                    isDraw = true;
                     isWork = false;
                     break;
                 }
                 else if (playerHP <= 0)
                 {
-                    Console.Clear();
-                    Console.WriteLine($"{playerName} died\nGAME OVER");
-                    Console.ReadKey();
+                    isEnemyWin = true;
                     isWork = false;
                     break;
                 }
                 else if (enemyHP <= 0)
                 {
-                    Console.Clear();
-                    Console.WriteLine($"{enemyName} died\n{playerName} WIN!!!");
-                    Console.ReadKey();
+                    isPlayerWin = true;
                     isWork = false;
                     break;
                 }
+            }
+
+            if (isDraw)
+            {
+                Console.Clear();
+                Console.WriteLine($"{playerName} and {enemyName} dead\nDRAW");
+                Console.ReadKey();
+            }
+            else if (isPlayerWin)
+            {
+                Console.Clear();
+                Console.WriteLine($"{enemyName} died\n{playerName} WIN!!!");
+                Console.ReadKey();
+            }
+            else if (isEnemyWin)
+            {
+                Console.Clear();
+                Console.WriteLine($"{playerName} died\nGAME OVER");
+                Console.ReadKey();
+            }
+            else
+            {
+                Console.Clear();
+                Console.WriteLine("Error, result not found");
+                Console.ReadKey();
             }
         }
     }
