@@ -1,0 +1,8 @@
+C:\Users\Familiy\Documents\GitHub\MixiIJuniorTasks\WorkWithSpecificColumnsAndRows\bin\Debug\WorkWithSpecificColumnsAndRows.exe.config
+C:\Users\Familiy\Documents\GitHub\MixiIJuniorTasks\WorkWithSpecificColumnsAndRows\bin\Debug\WorkWithSpecificColumnsAndRows.exe
+C:\Users\Familiy\Documents\GitHub\MixiIJuniorTasks\WorkWithSpecificColumnsAndRows\bin\Debug\WorkWithSpecificColumnsAndRows.pdb
+C:\Users\Familiy\Documents\GitHub\MixiIJuniorTasks\WorkWithSpecificColumnsAndRows\obj\Debug\WorkWithSpecificColumnsAndRows.csproj.AssemblyReference.cache
+C:\Users\Familiy\Documents\GitHub\MixiIJuniorTasks\WorkWithSpecificColumnsAndRows\obj\Debug\WorkWithSpecificColumnsAndRows.csproj.SuggestedBindingRedirects.cache
+C:\Users\Familiy\Documents\GitHub\MixiIJuniorTasks\WorkWithSpecificColumnsAndRows\obj\Debug\WorkWithSpecificColumnsAndRows.csproj.CoreCompileInputs.cache
+C:\Users\Familiy\Documents\GitHub\MixiIJuniorTasks\WorkWithSpecificColumnsAndRows\obj\Debug\WorkWithSpecificColumnsAndRows.exe
+C:\Users\Familiy\Documents\GitHub\MixiIJuniorTasks\WorkWithSpecificColumnsAndRows\obj\Debug\WorkWithSpecificColumnsAndRows.pdb
