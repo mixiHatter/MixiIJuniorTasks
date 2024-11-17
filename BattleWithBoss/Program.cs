@@ -12,7 +12,6 @@ namespace BattleWithBoss
             const string CommandRegeneration = "4";
             const string CommandSurrender = "5";
 
-            bool isWork = true;
             Random random = new Random();
             string userCommand;
             
@@ -40,9 +39,8 @@ namespace BattleWithBoss
             Console.Write("Input player name: ");
             playerName = Console.ReadLine();
 
-            while (isWork)
-            {
-                Console.Clear();
+            while (playerHP > 0 && enemyHP > 0)
+                {
                 Console.SetCursorPosition(0,0);
                 Console.WriteLine(playerName);
                 Console.SetCursorPosition(0, 1);
@@ -76,17 +74,16 @@ namespace BattleWithBoss
                 Console.Write("Input command: ");
                 userCommand = Convert.ToString(Console.ReadLine());
 
-                switch(userCommand)
+                switch (userCommand)
                 {
                     case CommandBaseAttack:
-                        playerBaseAttack = random.Next(playerMinBaseAttack,playerMaxBaseAttack);
+                        playerBaseAttack = random.Next(playerMinBaseAttack, playerMaxBaseAttack);
                         enemyHP -= playerBaseAttack;
                         Console.WriteLine($"{playerName} use base attack, {enemyName} get -{playerBaseAttack}HP");
 
                         enemyBaseAttack = random.Next(enemyMinBaseAttack, enemyMaxBaseAttack);
                         playerHP -= enemyBaseAttack;
                         Console.WriteLine($"{enemyName} use base attack, {playerName} get -{enemyBaseAttack}HP");
-                        Console.ReadKey();
                         break;
 
                     case CommandFireBall:
@@ -99,7 +96,6 @@ namespace BattleWithBoss
                             enemyBaseAttack = random.Next(enemyMinBaseAttack, enemyMaxBaseAttack);
                             playerHP -= enemyBaseAttack;
                             Console.WriteLine($"{enemyName} use base attack, {playerName} get -{enemyBaseAttack}HP");
-                            Console.ReadKey();
                         }
                         else
                         {
@@ -108,14 +104,13 @@ namespace BattleWithBoss
                             enemyBaseAttack = random.Next(enemyMinBaseAttack, enemyMaxBaseAttack);
                             playerHP -= enemyBaseAttack;
                             Console.WriteLine($"{enemyName} use base attack, {playerName} get -{enemyBaseAttack}HP");
-                            Console.ReadKey();
                         }
 
                         canExplosionCharge = true;
                         break;
 
                     case CommandExplosion:
-                        if(canExplosionCharge == true)
+                        if (canExplosionCharge == true)
                         {
                             enemyHP -= explosionAttack;
                             canExplosionCharge = false;
@@ -124,8 +119,6 @@ namespace BattleWithBoss
                             enemyBaseAttack = random.Next(enemyMinBaseAttack, enemyMaxBaseAttack);
                             playerHP -= enemyBaseAttack;
                             Console.WriteLine($"{enemyName} use base attack, {playerName} get -{enemyBaseAttack}HP");
-                            
-                            Console.ReadKey();
                         }
                         else
                         {
@@ -134,13 +127,11 @@ namespace BattleWithBoss
                             enemyBaseAttack = random.Next(enemyMinBaseAttack, enemyMaxBaseAttack);
                             playerHP -= enemyBaseAttack;
                             Console.WriteLine($"{enemyName} use base attack, {playerName} get -{enemyBaseAttack}HP");
-
-                            Console.ReadKey();
                         }
                         break;
 
                     case CommandRegeneration:
-                        if(regerationCount > 0)
+                        if (regerationCount > 0)
                         {
                             playerHP = playerMaxHP;
                             playerMana = playerMaxMana;
@@ -150,7 +141,6 @@ namespace BattleWithBoss
                             enemyBaseAttack = random.Next(enemyMinBaseAttack, enemyMaxBaseAttack);
                             playerHP -= enemyBaseAttack;
                             Console.WriteLine($"{enemyName} use base attack, {playerName} get -{enemyBaseAttack}HP");
-                            Console.ReadKey();
                         }
                         else
                         {
@@ -159,54 +149,40 @@ namespace BattleWithBoss
                             enemyBaseAttack = random.Next(enemyMinBaseAttack, enemyMaxBaseAttack);
                             playerHP -= enemyBaseAttack;
                             Console.WriteLine($"{enemyName} use base attack, {playerName} get -{enemyBaseAttack}HP");
-                            Console.ReadKey();
                         }
                         break;
 
                     case CommandSurrender:
                         Console.WriteLine("You surrender!\nGAME OVER");
-                        Console.ReadKey();
-                        isWork = false;
+                        playerHP = 0;
                         break;
 
                     default:
                         Console.WriteLine("The command was not found");
-                        Console.ReadKey();
                         break;
-
                 }
-
-                if (playerHP <= 0 || enemyHP <= 0)
-                {
-                    isWork = false;
-                    break;
-                }
+                Console.ReadKey();
+                Console.Clear();
             }
 
+            Console.Clear();
             if (playerHP <= 0 && enemyHP <= 0)
             {
-                Console.Clear();
                 Console.WriteLine($"{playerName} and {enemyName} dead\nDRAW");
-                Console.ReadKey();
             }
             else if (enemyHP <= 0)
             {
-                Console.Clear();
                 Console.WriteLine($"{enemyName} died\n{playerName} WIN!!!");
-                Console.ReadKey();
             }
             else if (playerHP <= 0)
             {
-                Console.Clear();
                 Console.WriteLine($"{playerName} died\nGAME OVER");
-                Console.ReadKey();
             }
             else
             {
-                Console.Clear();
                 Console.WriteLine("Error, result not found");
-                Console.ReadKey();
             }
+            Console.ReadKey();
         }
     }
 }
