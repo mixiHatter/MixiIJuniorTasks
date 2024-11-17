@@ -10,8 +10,10 @@ namespace WorkWithSpecificColumnsAndRows
             Random random = new Random();
             int randomMin = 1;
             int randomMax = 10;
+            int arrayRow = 1;
+            int arrayColumn = 0;
             int summSecondRow = 0;
-            int productFirstColumn;
+            int productFirstColumn = 1;
 
             for (int i = 0; i < numbers.GetLength(0); i++)
             {
@@ -25,17 +27,15 @@ namespace WorkWithSpecificColumnsAndRows
 
             for (int i = 0; i < numbers.GetLength(1); i++)
             {
-                summSecondRow += numbers[1, i];
+                summSecondRow += numbers[arrayRow, i];
             }
 
-            productFirstColumn = numbers[0, 0];
-
-            for (int i = 1; i < numbers.GetLength(0); i++)
+            for (int i = 0; i < numbers.GetLength(0); i++)
             {
-                productFirstColumn *= numbers[i, 0];
+                productFirstColumn *= numbers[i, arrayColumn];
             }
 
-            Console.WriteLine($"summ of second row = {summSecondRow}\nproduct of first column = {productFirstColumn}");
+            Console.WriteLine($"summ of {++arrayRow} row = {summSecondRow}\nproduct of {++arrayColumn} column = {productFirstColumn}");
         }
     }
 }
