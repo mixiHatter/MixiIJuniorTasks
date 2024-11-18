@@ -1,0 +1,8 @@
+C:\Users\Familiy\Documents\GitHub\MixiIJuniorTasks\LargestElement\bin\Debug\LargestElement.exe.config
+C:\Users\Familiy\Documents\GitHub\MixiIJuniorTasks\LargestElement\bin\Debug\LargestElement.exe
+C:\Users\Familiy\Documents\GitHub\MixiIJuniorTasks\LargestElement\bin\Debug\LargestElement.pdb
+C:\Users\Familiy\Documents\GitHub\MixiIJuniorTasks\LargestElement\obj\Debug\LargestElement.csproj.AssemblyReference.cache
+C:\Users\Familiy\Documents\GitHub\MixiIJuniorTasks\LargestElement\obj\Debug\LargestElement.csproj.SuggestedBindingRedirects.cache
+C:\Users\Familiy\Documents\GitHub\MixiIJuniorTasks\LargestElement\obj\Debug\LargestElement.csproj.CoreCompileInputs.cache
+C:\Users\Familiy\Documents\GitHub\MixiIJuniorTasks\LargestElement\obj\Debug\LargestElement.exe
+C:\Users\Familiy\Documents\GitHub\MixiIJuniorTasks\LargestElement\obj\Debug\LargestElement.pdb
