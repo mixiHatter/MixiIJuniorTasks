@@ -10,7 +10,8 @@ namespace LargestElement
             Random random = new Random();
             int randomMin = 1;
             int randomMax = 101;
-            int largestElement = 0;
+            int largestElement;
+            int stub = 0;
 
             for (int i = 0; i < numbers.GetLength(0); i++)
             {
@@ -22,6 +23,8 @@ namespace LargestElement
                 }
                 Console.WriteLine();
             }
+
+            largestElement = numbers[0, 0];
 
             for (int i = 0; i < numbers.GetLength(0); i++)
             {
@@ -42,11 +45,12 @@ namespace LargestElement
                 {
                     if(largestElement == numbers[i,j])
                     {
-                        numbers[i, j] = 0;
+                        numbers[i, j] = stub;
                     }
                     Console.Write(numbers[i, j]);
                     Console.Write(",");
                 }
+
                 Console.WriteLine();
             }
         }
