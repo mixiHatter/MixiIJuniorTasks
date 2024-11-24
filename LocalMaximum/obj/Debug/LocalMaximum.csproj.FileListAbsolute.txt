@@ -1,0 +1,8 @@
+C:\Users\Familiy\Documents\GitHub\MixiIJuniorTasks\LocalMaximum\obj\Debug\LocalMaximum.csproj.AssemblyReference.cache
+C:\Users\Familiy\Documents\GitHub\MixiIJuniorTasks\LocalMaximum\obj\Debug\LocalMaximum.csproj.SuggestedBindingRedirects.cache
+C:\Users\Familiy\Documents\GitHub\MixiIJuniorTasks\LocalMaximum\obj\Debug\LocalMaximum.csproj.CoreCompileInputs.cache
+C:\Users\Familiy\Documents\GitHub\MixiIJuniorTasks\LocalMaximum\bin\Debug\LocalMaximum.exe.config
+C:\Users\Familiy\Documents\GitHub\MixiIJuniorTasks\LocalMaximum\bin\Debug\LocalMaximum.exe
+C:\Users\Familiy\Documents\GitHub\MixiIJuniorTasks\LocalMaximum\bin\Debug\LocalMaximum.pdb
+C:\Users\Familiy\Documents\GitHub\MixiIJuniorTasks\LocalMaximum\obj\Debug\LocalMaximum.exe
+C:\Users\Familiy\Documents\GitHub\MixiIJuniorTasks\LocalMaximum\obj\Debug\LocalMaximum.pdb
