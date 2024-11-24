@@ -7,7 +7,8 @@ namespace LocalMaximum
         static void Main(string[] args)
         {
             int maxRange = 100;
-            int[] array = new int[30];
+            int arrayLength = 30;
+            int[] array = new int[arrayLength];
 
             GetArray(ref array, array.Length, maxRange);
 
