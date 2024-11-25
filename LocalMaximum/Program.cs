@@ -13,17 +13,11 @@ namespace LocalMaximum
             GetArray(array, array.Length, maxRange);
 
             if (array[0] > array[1])
-                Console.WriteLine($"{array[0]} > {array[1]}");
-            else
-                Console.WriteLine($"{array[0]} < {array[1]}");
-
+                Console.WriteLine($"{array[0]} > {array[1]}")
+                
             for (int i = 1; i < array.Length - 1; i++)
             {
-                if (i == array.Length - 1)
-                {
-                }
-
-                else if (array[i] > array[i - 1] && array[i] > array[i + 1])
+                if (array[i] > array[i - 1] && array[i] > array[i + 1])
                 {
                     Console.WriteLine($"{array[i - 1]} < {array[i]} > {array[i + 1]}");
                 }
@@ -31,8 +25,6 @@ namespace LocalMaximum
 
             if (array[array.Length - 1] > array[array.Length - 2])
                 Console.WriteLine($"{array[array.Length - 1]} > {array[array.Length - 2]}");
-            else
-                Console.WriteLine($"{array[array.Length - 1]} < {array[array.Length - 2]}");
         }
 
         static void GetArray(int[] array, int lengthArray, int maxRange, int minRange = 0)
