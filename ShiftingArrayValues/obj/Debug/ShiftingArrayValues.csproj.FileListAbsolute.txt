@@ -1,0 +1,8 @@
+C:\Users\c5281\Documents\GitHub\MixiIJuniorTasks\ShiftingArrayValues\bin\Debug\ShiftingArrayValues.exe.config
+C:\Users\c5281\Documents\GitHub\MixiIJuniorTasks\ShiftingArrayValues\bin\Debug\ShiftingArrayValues.exe
+C:\Users\c5281\Documents\GitHub\MixiIJuniorTasks\ShiftingArrayValues\bin\Debug\ShiftingArrayValues.pdb
+C:\Users\c5281\Documents\GitHub\MixiIJuniorTasks\ShiftingArrayValues\obj\Debug\ShiftingArrayValues.csproj.AssemblyReference.cache
+C:\Users\c5281\Documents\GitHub\MixiIJuniorTasks\ShiftingArrayValues\obj\Debug\ShiftingArrayValues.csproj.SuggestedBindingRedirects.cache
+C:\Users\c5281\Documents\GitHub\MixiIJuniorTasks\ShiftingArrayValues\obj\Debug\ShiftingArrayValues.csproj.CoreCompileInputs.cache
+C:\Users\c5281\Documents\GitHub\MixiIJuniorTasks\ShiftingArrayValues\obj\Debug\ShiftingArrayValues.exe
+C:\Users\c5281\Documents\GitHub\MixiIJuniorTasks\ShiftingArrayValues\obj\Debug\ShiftingArrayValues.pdb
