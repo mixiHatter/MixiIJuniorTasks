@@ -1,0 +1,8 @@
+C:\Users\c5281\Documents\GitHub\MixiIJuniorTasks\DynamicArray\bin\Debug\DynamicArray.exe.config
+C:\Users\c5281\Documents\GitHub\MixiIJuniorTasks\DynamicArray\bin\Debug\DynamicArray.exe
+C:\Users\c5281\Documents\GitHub\MixiIJuniorTasks\DynamicArray\bin\Debug\DynamicArray.pdb
+C:\Users\c5281\Documents\GitHub\MixiIJuniorTasks\DynamicArray\obj\Debug\DynamicArray.csproj.AssemblyReference.cache
+C:\Users\c5281\Documents\GitHub\MixiIJuniorTasks\DynamicArray\obj\Debug\DynamicArray.csproj.SuggestedBindingRedirects.cache
+C:\Users\c5281\Documents\GitHub\MixiIJuniorTasks\DynamicArray\obj\Debug\DynamicArray.csproj.CoreCompileInputs.cache
+C:\Users\c5281\Documents\GitHub\MixiIJuniorTasks\DynamicArray\obj\Debug\DynamicArray.exe
+C:\Users\c5281\Documents\GitHub\MixiIJuniorTasks\DynamicArray\obj\Debug\DynamicArray.pdb
