@@ -1,0 +1,8 @@
+C:\Users\c5281\Documents\GitHub\MixiIJuniorTasks\SubarrayRepetitionsNumbers\bin\Debug\SubarrayRepetitionsNumbers.exe.config
+C:\Users\c5281\Documents\GitHub\MixiIJuniorTasks\SubarrayRepetitionsNumbers\bin\Debug\SubarrayRepetitionsNumbers.exe
+C:\Users\c5281\Documents\GitHub\MixiIJuniorTasks\SubarrayRepetitionsNumbers\bin\Debug\SubarrayRepetitionsNumbers.pdb
+C:\Users\c5281\Documents\GitHub\MixiIJuniorTasks\SubarrayRepetitionsNumbers\obj\Debug\SubarrayRepetitionsNumbers.csproj.AssemblyReference.cache
+C:\Users\c5281\Documents\GitHub\MixiIJuniorTasks\SubarrayRepetitionsNumbers\obj\Debug\SubarrayRepetitionsNumbers.csproj.SuggestedBindingRedirects.cache
+C:\Users\c5281\Documents\GitHub\MixiIJuniorTasks\SubarrayRepetitionsNumbers\obj\Debug\SubarrayRepetitionsNumbers.csproj.CoreCompileInputs.cache
+C:\Users\c5281\Documents\GitHub\MixiIJuniorTasks\SubarrayRepetitionsNumbers\obj\Debug\SubarrayRepetitionsNumbers.exe
+C:\Users\c5281\Documents\GitHub\MixiIJuniorTasks\SubarrayRepetitionsNumbers\obj\Debug\SubarrayRepetitionsNumbers.pdb

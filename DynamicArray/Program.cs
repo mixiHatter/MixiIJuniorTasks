@@ -6,6 +6,8 @@ namespace DynamicArray
     {
         static void Main(string[] args)
         {
+            string commandExit = "exit";
+            string commandSum = "sum";
             bool isWork = true;
             string userInput;
             int[] userNumbers = new int[0];
@@ -13,23 +15,25 @@ namespace DynamicArray
 
             while (isWork)
             {
-                foreach (int i in userNumbers)
-                    Console.Write(i + ",");
+                foreach (int number in userNumbers)
+                    Console.Write(number + ",");
 
                 Console.WriteLine();
                 userInput = Console.ReadLine();
 
-                if (userInput == "sum")
+                if (userInput == commandSum)
                 {
                     foreach(int i in userNumbers)
                         sum += i;
 
                     Console.WriteLine(sum);
+                    sum = 0;
                     Console.ReadKey();
                 }
-
-                else if (userInput == "exit") 
+                else if (userInput == commandExit)
+                {
                     isWork = false;
+                }
 
                 else
                 {
