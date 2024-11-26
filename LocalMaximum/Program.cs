@@ -8,26 +8,26 @@ namespace LocalMaximum
         {
             int maxRange = 100;
             int arrayLength = 30;
-            int[] array = new int[arrayLength];
+            int[] numbers = new int[arrayLength];
+            GetFullArrayRandomNumbers(numbers, numbers.Length, maxRange);
+            int lastIndex = numbers.Length - 1;
 
-            GetArray(array, array.Length, maxRange);
-
-            if (array[0] > array[1])
-                Console.WriteLine($"{array[0]} > {array[1]}")
+            if (numbers[0] > numbers[1])
+                Console.WriteLine($"{numbers[0]}");
                 
-            for (int i = 1; i < array.Length - 1; i++)
+            for (int i = 1; i < numbers.Length - 1; i++)
             {
-                if (array[i] > array[i - 1] && array[i] > array[i + 1])
+                if (numbers[i] > numbers[i - 1] && numbers[i] > numbers[i + 1])
                 {
-                    Console.WriteLine($"{array[i - 1]} < {array[i]} > {array[i + 1]}");
+                    Console.WriteLine($"{numbers[i]}");
                 }
             }
 
-            if (array[array.Length - 1] > array[array.Length - 2])
-                Console.WriteLine($"{array[array.Length - 1]} > {array[array.Length - 2]}");
+            if (numbers[lastIndex] > numbers[lastIndex - 1])
+                Console.WriteLine($"{numbers[lastIndex]}");
         }
 
-        static void GetArray(int[] array, int lengthArray, int maxRange, int minRange = 0)
+        static void GetFullArrayRandomNumbers(int[] array, int lengthArray, int maxRange, int minRange = 0)
         {
             Random random = new Random();
 
