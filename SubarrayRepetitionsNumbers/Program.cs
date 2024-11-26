@@ -34,9 +34,7 @@ namespace SubarrayRepetitionsNumbers
             }
 
             foreach (int number  in  numbers)
-            {
                 Console.Write(number + ",");
-            }
 
             Console.WriteLine();
             Console.WriteLine($"The number {repetitionsNumber} is repeated {maxCountRepetitions} times in a row.");
