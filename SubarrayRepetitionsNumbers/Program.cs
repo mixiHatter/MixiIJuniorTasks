@@ -23,7 +23,6 @@ namespace SubarrayRepetitionsNumbers
                 {
                     countRepetitions++;
                 }
-
                 else
                     countRepetitions = 1;
 
@@ -34,9 +33,9 @@ namespace SubarrayRepetitionsNumbers
                 }
             }
 
-            foreach (int i  in  numbers)
+            foreach (int number  in  numbers)
             {
-                Console.Write(i + ",");
+                Console.Write(number + ",");
             }
 
             Console.WriteLine();
