@@ -34,7 +34,6 @@ namespace DynamicArray
                 {
                     isWork = false;
                 }
-
                 else
                 {
                     int[] arrayExtension = new int[userNumbers.Length + 1];
