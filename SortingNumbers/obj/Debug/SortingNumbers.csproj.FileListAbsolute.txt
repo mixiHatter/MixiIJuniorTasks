@@ -1,0 +1,8 @@
+C:\Users\c5281\Documents\GitHub\MixiIJuniorTasks\SortingNumbers\bin\Debug\SortingNumbers.exe.config
+C:\Users\c5281\Documents\GitHub\MixiIJuniorTasks\SortingNumbers\bin\Debug\SortingNumbers.exe
+C:\Users\c5281\Documents\GitHub\MixiIJuniorTasks\SortingNumbers\bin\Debug\SortingNumbers.pdb
+C:\Users\c5281\Documents\GitHub\MixiIJuniorTasks\SortingNumbers\obj\Debug\SortingNumbers.csproj.AssemblyReference.cache
+C:\Users\c5281\Documents\GitHub\MixiIJuniorTasks\SortingNumbers\obj\Debug\SortingNumbers.csproj.SuggestedBindingRedirects.cache
+C:\Users\c5281\Documents\GitHub\MixiIJuniorTasks\SortingNumbers\obj\Debug\SortingNumbers.csproj.CoreCompileInputs.cache
+C:\Users\c5281\Documents\GitHub\MixiIJuniorTasks\SortingNumbers\obj\Debug\SortingNumbers.exe
+C:\Users\c5281\Documents\GitHub\MixiIJuniorTasks\SortingNumbers\obj\Debug\SortingNumbers.pdb
