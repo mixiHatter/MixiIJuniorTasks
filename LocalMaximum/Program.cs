@@ -32,7 +32,7 @@ namespace LocalMaximum
             Random random = new Random();
 
             for (int i = 0; i < lengthArray; i++)
-                array[i] = random.Next(minRange, maxRange++);
+                array[i] = random.Next(minRange, maxRange + 1);
         }
     }
 }
