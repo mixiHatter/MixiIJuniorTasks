@@ -7,8 +7,6 @@ namespace ParenthesisExpression
         static void Main(string[] args)
         {
             string text = Console.ReadLine(); ;
-            int openingBrecketCount = 0;
-            int closingBrecketCount = 0;
             char openingBrecket = '(';
             char closingBrecket = ')';
             int maxDepth = 0;
@@ -19,7 +17,6 @@ namespace ParenthesisExpression
             {
                 if (text[i] == openingBrecket)
                 {
-                    openingBrecketCount++;
                     depth++;
 
                     if (depth > maxDepth)
@@ -27,7 +24,6 @@ namespace ParenthesisExpression
                 }
                 else if (text[i] == closingBrecket)
                 {
-                    closingBrecketCount++;
                     depth--;
 
                     if (depth < 0)
