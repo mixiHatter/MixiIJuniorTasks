@@ -6,27 +6,22 @@ namespace ReadInt
     {
         static void Main(string[] args)
         {
-            bool isConvertCorrect = false;
-
-            while (isConvertCorrect == false)
-            {
-                isConvertCorrect = ReadInt(Console.ReadLine(), out int number, out string answer);
-
-                Console.WriteLine(answer);
-            }
+            Console.WriteLine(ReadInt(Console.ReadLine()));
         }
 
-        static bool ReadInt(string text, out int number, out string answer)
+        static int ReadInt(string text)
         {
             bool result = int.TryParse(text, out var convertNumber);
-            number = convertNumber;
 
-            if (result == true)
-                answer = "Number: " + number;
-            else
-                answer = "Repeat the input";
+            while (result == false)
+            {
+                Console.WriteLine("Введите повторно:");
 
-            return result;
+                result = int.TryParse(Console.ReadLine(), out var number);
+                convertNumber = number;
+            }
+
+            return convertNumber;
         }
     }
 }

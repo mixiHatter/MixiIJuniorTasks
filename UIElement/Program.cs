@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace UIElement
 {
@@ -10,6 +6,29 @@ namespace UIElement
     {
         static void Main(string[] args)
         {
+            int mana = 0;
+
+            while (true)
+            {
+                mana = Convert.ToInt32(Console.ReadLine());
+                GetDrowBar(mana);
+            }
+        }
+        
+        static void GetDrowBar(int fill)
+        {
+            char havePoint = '|';
+            char freePont = '_';
+
+            for(int i = 1; i <= 10;  i++)
+            {
+                if (fill >= i)
+                    Console.Write(havePoint);
+                else
+                    Console.Write(freePont);
+
+            }
+            Console.WriteLine();
         }
     }
 }

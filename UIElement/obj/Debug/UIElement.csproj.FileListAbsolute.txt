@@ -1,0 +1,8 @@
+C:\Users\c5281\Documents\GitHub\MixiIJuniorTasks\UIElement\bin\Debug\UIElement.exe.config
+C:\Users\c5281\Documents\GitHub\MixiIJuniorTasks\UIElement\bin\Debug\UIElement.exe
+C:\Users\c5281\Documents\GitHub\MixiIJuniorTasks\UIElement\bin\Debug\UIElement.pdb
+C:\Users\c5281\Documents\GitHub\MixiIJuniorTasks\UIElement\obj\Debug\UIElement.csproj.AssemblyReference.cache
+C:\Users\c5281\Documents\GitHub\MixiIJuniorTasks\UIElement\obj\Debug\UIElement.csproj.SuggestedBindingRedirects.cache
+C:\Users\c5281\Documents\GitHub\MixiIJuniorTasks\UIElement\obj\Debug\UIElement.csproj.CoreCompileInputs.cache
+C:\Users\c5281\Documents\GitHub\MixiIJuniorTasks\UIElement\obj\Debug\UIElement.exe
+C:\Users\c5281\Documents\GitHub\MixiIJuniorTasks\UIElement\obj\Debug\UIElement.pdb
