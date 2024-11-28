@@ -10,19 +10,21 @@ namespace ReadInt
 
             while (isConvertCorrect == false)
             {
-                isConvertCorrect = ReadInt(Console.ReadLine(), out int number);
+                isConvertCorrect = ReadInt(Console.ReadLine(), out int number, out string answer);
 
-                if (isConvertCorrect == true)
-                    Console.WriteLine($"Number: {number}");
-                else
-                    Console.WriteLine("Repeat the input");
+                Console.WriteLine(answer);
             }
         }
 
-        static bool ReadInt(string text, out int number)
+        static bool ReadInt(string text, out int number, out string answer)
         {
             bool result = int.TryParse(text, out var convertNumber);
             number = convertNumber;
+
+            if (result == true)
+                answer = "Number: " + number;
+            else
+                answer = "Repeat the input";
 
             return result;
         }
