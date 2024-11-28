@@ -7,28 +7,44 @@ namespace UIElement
         static void Main(string[] args)
         {
             int mana = 0;
+            int healthPoint = 0;
+            int positionXMana = 60;
 
             while (true)
             {
+                Console.WriteLine("Введите кол-во жизни: ");
+                healthPoint = Convert.ToInt32(Console.ReadLine());
+
+                GetDrowBar(healthPoint);
+
+                Console.WriteLine();
+                Console.WriteLine("Введите кол-во маны: ");
                 mana = Convert.ToInt32(Console.ReadLine());
-                GetDrowBar(mana);
+
+                GetDrowBar(mana, positionXMana);
+                
+                Console.ReadKey();
+                Console.Clear();
             }
         }
         
-        static void GetDrowBar(int fill)
+        static void GetDrowBar(int fill, int positionX = 30, int positionY = 0)
         {
-            char havePoint = '|';
+            char havePoint = '#';
             char freePont = '_';
 
-            for(int i = 1; i <= 10;  i++)
+            Console.SetCursorPosition(positionX, positionY);
+            Console.Write("[");
+
+            for (int i = 1; i <= 10;  i++)
             {
-                if (fill >= i)
+                if (fill / 10 >= i)
                     Console.Write(havePoint);
                 else
                     Console.Write(freePont);
-
             }
-            Console.WriteLine();
+
+            Console.Write("]");
         }
     }
 }
