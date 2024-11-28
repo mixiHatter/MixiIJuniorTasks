@@ -1,0 +1,8 @@
+C:\Users\c5281\Documents\GitHub\MixiIJuniorTasks\ParenthesisExpression\obj\Debug\ParenthesisExpression.csproj.AssemblyReference.cache
+C:\Users\c5281\Documents\GitHub\MixiIJuniorTasks\ParenthesisExpression\obj\Debug\ParenthesisExpression.csproj.SuggestedBindingRedirects.cache
+C:\Users\c5281\Documents\GitHub\MixiIJuniorTasks\ParenthesisExpression\obj\Debug\ParenthesisExpression.csproj.CoreCompileInputs.cache
+C:\Users\c5281\Documents\GitHub\MixiIJuniorTasks\ParenthesisExpression\bin\Debug\ParenthesisExpression.exe.config
+C:\Users\c5281\Documents\GitHub\MixiIJuniorTasks\ParenthesisExpression\bin\Debug\ParenthesisExpression.exe
+C:\Users\c5281\Documents\GitHub\MixiIJuniorTasks\ParenthesisExpression\bin\Debug\ParenthesisExpression.pdb
+C:\Users\c5281\Documents\GitHub\MixiIJuniorTasks\ParenthesisExpression\obj\Debug\ParenthesisExpression.exe
+C:\Users\c5281\Documents\GitHub\MixiIJuniorTasks\ParenthesisExpression\obj\Debug\ParenthesisExpression.pdb
