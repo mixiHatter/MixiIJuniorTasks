@@ -9,26 +9,33 @@ namespace UIElement
             int mana = 0;
             int healthPoint = 0;
             int positionXMana = 60;
-
+            int sizeBar;
             while (true)
             {
                 Console.WriteLine("Введите кол-во жизни: ");
                 healthPoint = Convert.ToInt32(Console.ReadLine());
 
-                GetDrowBar(healthPoint);
+                Console.WriteLine("Введите длину бара: ");
+                sizeBar = Convert.ToInt32(Console.ReadLine());
+
+                Console.Clear();
+                GetDrowBar(healthPoint, sizeBar);
 
                 Console.WriteLine();
                 Console.WriteLine("Введите кол-во маны: ");
                 mana = Convert.ToInt32(Console.ReadLine());
 
-                GetDrowBar(mana, positionXMana);
+                Console.WriteLine("Введите длину бара: ");
+                sizeBar = Convert.ToInt32(Console.ReadLine());
+
+                GetDrowBar(mana, sizeBar, positionXMana);
                 
                 Console.ReadKey();
                 Console.Clear();
             }
         }
         
-        static void GetDrowBar(int fill, int positionX = 30, int positionY = 0)
+        static void GetDrowBar(int fill, int sizeBar, int positionX = 30, int positionY = 0)
         {
             char havePoint = '#';
             char freePont = '_';
@@ -36,13 +43,14 @@ namespace UIElement
             Console.SetCursorPosition(positionX, positionY);
             Console.Write("[");
 
-            for (int i = 1; i <= 10;  i++)
-            {
-                if (fill / 10 >= i)
-                    Console.Write(havePoint);
-                else
-                    Console.Write(freePont);
-            }
+            if (sizeBar < fill)
+                fill = fill / sizeBar;
+
+            for (int i = 1; i <= fill; i++)
+                Console.Write(havePoint);
+
+            for(int i = 1;i <= sizeBar - fill; i++)
+                Console.Write(freePont);
 
             Console.Write("]");
         }

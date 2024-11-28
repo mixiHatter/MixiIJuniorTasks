@@ -1,0 +1,8 @@
+C:\Users\c5281\Documents\GitHub\MixiIJuniorTasks\KansasCityShuffle\bin\Debug\KansasCityShuffle.exe.config
+C:\Users\c5281\Documents\GitHub\MixiIJuniorTasks\KansasCityShuffle\bin\Debug\KansasCityShuffle.exe
+C:\Users\c5281\Documents\GitHub\MixiIJuniorTasks\KansasCityShuffle\bin\Debug\KansasCityShuffle.pdb
+C:\Users\c5281\Documents\GitHub\MixiIJuniorTasks\KansasCityShuffle\obj\Debug\KansasCityShuffle.csproj.AssemblyReference.cache
+C:\Users\c5281\Documents\GitHub\MixiIJuniorTasks\KansasCityShuffle\obj\Debug\KansasCityShuffle.csproj.SuggestedBindingRedirects.cache
+C:\Users\c5281\Documents\GitHub\MixiIJuniorTasks\KansasCityShuffle\obj\Debug\KansasCityShuffle.csproj.CoreCompileInputs.cache
+C:\Users\c5281\Documents\GitHub\MixiIJuniorTasks\KansasCityShuffle\obj\Debug\KansasCityShuffle.exe
+C:\Users\c5281\Documents\GitHub\MixiIJuniorTasks\KansasCityShuffle\obj\Debug\KansasCityShuffle.pdb
