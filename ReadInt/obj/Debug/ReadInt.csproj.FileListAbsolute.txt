@@ -1,0 +1,8 @@
+C:\Users\c5281\Documents\GitHub\MixiIJuniorTasks\ReadInt\obj\Debug\ReadInt.csproj.AssemblyReference.cache
+C:\Users\c5281\Documents\GitHub\MixiIJuniorTasks\ReadInt\obj\Debug\ReadInt.csproj.SuggestedBindingRedirects.cache
+C:\Users\c5281\Documents\GitHub\MixiIJuniorTasks\ReadInt\obj\Debug\ReadInt.csproj.CoreCompileInputs.cache
+C:\Users\c5281\Documents\GitHub\MixiIJuniorTasks\ReadInt\bin\Debug\ReadInt.exe.config
+C:\Users\c5281\Documents\GitHub\MixiIJuniorTasks\ReadInt\bin\Debug\ReadInt.exe
+C:\Users\c5281\Documents\GitHub\MixiIJuniorTasks\ReadInt\bin\Debug\ReadInt.pdb
+C:\Users\c5281\Documents\GitHub\MixiIJuniorTasks\ReadInt\obj\Debug\ReadInt.exe
+C:\Users\c5281\Documents\GitHub\MixiIJuniorTasks\ReadInt\obj\Debug\ReadInt.pdb
