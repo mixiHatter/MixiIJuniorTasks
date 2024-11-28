@@ -16,6 +16,10 @@ namespace ShiftingArrayValues
             for (int i = 0; i < numbers.Length; i++)
                 numbers[i] = random.Next(minRange, maxRange + 1);
 
+            foreach (int number in numbers)
+                Console.Write(number + ",");
+
+            Console.WriteLine();
             userInput = Convert.ToInt32(Console.ReadLine());
 
             for (int i = 0;i < userInput;i++)
@@ -27,6 +31,9 @@ namespace ShiftingArrayValues
                     numbers[j + 1] = bufer;
                 }
             }
+
+            foreach (int number in numbers)
+                Console.Write(number + ",");
         }
     }
 }
