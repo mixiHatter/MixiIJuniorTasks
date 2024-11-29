@@ -11,17 +11,14 @@ namespace KansasCityShuffle
             int minRange = 0;
             int maxRange = 10;
 
-            for(int i = 0; i < numbers.Length; i++)
+            for (int i = 0; i < numbers.Length; i++)
                 numbers[i] = random.Next(minRange, maxRange);
 
-            foreach(int number in numbers)
-                Console.Write(number + ",");
+            ConsoleWriteArray(numbers);
 
             Shuffle(ref numbers);
-            Console.WriteLine();
 
-            foreach (int number in numbers)
-                Console.Write(number + ",");
+            ConsoleWriteArray(numbers);
         }
 
         static void Shuffle(ref int[] numbers)
@@ -32,13 +29,22 @@ namespace KansasCityShuffle
             int bufer = 0;
             int newIndex;
 
-            for(int i = 0;i < numbers.Length; i++)
+            for (int i = 0; i < numbers.Length; i++)
             {
-                newIndex = random.Next(minRange,maxRange);
+                newIndex = random.Next(minRange, maxRange);
                 bufer = numbers[i];
                 numbers[i] = numbers[newIndex];
                 numbers[newIndex] = bufer;
             }
         }
+
+        static void ConsoleWriteArray(int [] array)
+        {
+            foreach (int piece in array)
+                Console.Write(piece + ",");
+
+            Console.WriteLine();
+        }
     }
 }
+
