@@ -38,7 +38,7 @@ namespace KansasCityShuffle
             }
         }
 
-        static void ArrayOutput(int [] array)
+        static void ArrayOutput(int[] array)
         {
             foreach (int piece in array)
                 Console.Write(piece + ",");
