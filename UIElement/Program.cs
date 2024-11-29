@@ -10,48 +10,45 @@ namespace UIElement
             int healthPoint = 0;
             int positionXMana = 60;
             int sizeBar;
-            while (true)
-            {
-                Console.WriteLine("Введите кол-во жизни: ");
-                healthPoint = Convert.ToInt32(Console.ReadLine());
 
-                Console.WriteLine("Введите длину бара: ");
-                sizeBar = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Введите кол-во жизни: ");
+            healthPoint = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Введите длину бара: ");
+            sizeBar = Convert.ToInt32(Console.ReadLine());
+            Console.Clear();
 
-                Console.Clear();
-                GetDrowBar(healthPoint, sizeBar);
+            GetDrowBar(healthPoint, sizeBar);
 
-                Console.WriteLine();
-                Console.WriteLine("Введите кол-во маны: ");
-                mana = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine();
+            Console.WriteLine("Введите кол-во маны: ");
+            mana = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Введите длину бара: ");
+            sizeBar = Convert.ToInt32(Console.ReadLine());
 
-                Console.WriteLine("Введите длину бара: ");
-                sizeBar = Convert.ToInt32(Console.ReadLine());
+            GetDrowBar(mana, sizeBar, positionXMana);
 
-                GetDrowBar(mana, sizeBar, positionXMana);
-                
-                Console.ReadKey();
-                Console.Clear();
-            }
+            Console.ReadKey();
         }
-        
+
         static void GetDrowBar(int fill, int sizeBar, int positionX = 30, int positionY = 0)
         {
             char havePoint = '#';
             char freePont = '_';
+            double oneProcentBar = Convert.ToDouble(sizeBar) / 100;
+            int fillProcent = Convert.ToInt32(Convert.ToDouble(fill) * oneProcentBar);
+            int freeBar = Convert.ToInt32(Convert.ToDouble(sizeBar) - fillProcent);
+
+            char DrawBar(char symbol, double length)
+            {
+                for (int i = 1; i <= length; i++)
+                    Console.Write(symbol);
+                return symbol;
+            }
 
             Console.SetCursorPosition(positionX, positionY);
             Console.Write("[");
-
-            if (sizeBar < fill)
-                fill = fill / sizeBar;
-
-            for (int i = 1; i <= fill; i++)
-                Console.Write(havePoint);
-
-            for(int i = 1;i <= sizeBar - fill; i++)
-                Console.Write(freePont);
-
+            DrawBar(havePoint, fillProcent);
+            DrawBar(freePont, freeBar);
             Console.Write("]");
         }
     }
