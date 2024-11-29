@@ -7,8 +7,8 @@ namespace UIElement
     {
         static void Main(string[] args)
         {
-            int mana = 0;
-            int healthPoint = 0;
+            int mana;
+            int healthPoint;
             int positionXHealthPoint = 30;
             int positionXMana = 60;
             int sizeBar;
@@ -49,6 +49,7 @@ namespace UIElement
 
             return convertNumber;
         }
+        
         static string DrawBar(char symbol, double length)
         {
             string text = string.Empty;
