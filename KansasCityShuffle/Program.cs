@@ -39,7 +39,6 @@ namespace KansasCityShuffle
                 numbers[i] = numbers[newIndex];
                 numbers[newIndex] = bufer;
             }
-                
         }
     }
 }

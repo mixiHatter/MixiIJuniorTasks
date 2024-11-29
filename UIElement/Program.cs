@@ -17,7 +17,7 @@ namespace UIElement
             sizeBar = Convert.ToInt32(Console.ReadLine());
             Console.Clear();
 
-            GetDrowBar(healthPoint, sizeBar);
+            GetDrawBar(healthPoint, sizeBar);
 
             Console.WriteLine();
             Console.WriteLine("Введите кол-во маны: ");
@@ -25,16 +25,21 @@ namespace UIElement
             Console.WriteLine("Введите длину бара: ");
             sizeBar = Convert.ToInt32(Console.ReadLine());
 
-            GetDrowBar(mana, sizeBar, positionXMana);
+            GetDrawBar(mana, sizeBar, positionXMana);
 
             Console.ReadKey();
         }
 
-        static void GetDrowBar(int fill, int sizeBar, int positionX = 30, int positionY = 0)
+        static void GetDrawBar(int fill, int sizeBar, int positionX = 30, int positionY = 0)
         {
             char havePoint = '#';
             char freePont = '_';
-            double oneProcentBar = Convert.ToDouble(sizeBar) / 100;
+            double maxProcent = 100;
+            double oneProcentBar = Convert.ToDouble(sizeBar) / maxProcent;
+
+            if (fill > maxProcent)
+                fill = Convert.ToInt32(maxProcent);
+
             int fillProcent = Convert.ToInt32(Convert.ToDouble(fill) * oneProcentBar);
             int freeBar = Convert.ToInt32(Convert.ToDouble(sizeBar) - fillProcent);
 
