@@ -16,7 +16,7 @@ namespace PersonnelAccounting
             const int AddDossier = 1;
             const int ShowAllDossier = 2;
             const int DeleteDossier = 3;
-            const int SearchByLastName = 4;
+            const int SearchBySecondName = 4;
             const int Exit = 5;
 
             string[] fullNamesOfEmployees = new string[0];
@@ -30,7 +30,7 @@ namespace PersonnelAccounting
                 Console.Write($"Добавить досье - {AddDossier}" +
                               $"\nПоказать все досье - {ShowAllDossier}" +
                               $"\nУдалить досье - {DeleteDossier}" +
-                              $"\nИскать по фамилии - {SearchByLastName}" +
+                              $"\nИскать по фамилии - {SearchBySecondName}" +
                               $"\nВыход - {Exit}\n");
 
                 Console.Write("\nВведите команду: ");
@@ -50,8 +50,8 @@ namespace PersonnelAccounting
                         DeleteDossierByID(ref fullNamesOfEmployees, ref positionsOfEmployees);
                         break;
 
-                    case SearchByLastName:
-                        SearchByName(fullNamesOfEmployees, positionsOfEmployees);
+                    case SearchBySecondName:
+                        Program.SearchBySecondName(fullNamesOfEmployees, positionsOfEmployees);
                         break;
 
                     case Exit:
@@ -124,49 +124,27 @@ namespace PersonnelAccounting
             Console.WriteLine($"{id + 1} | {firstArray[id]} - {secondArray[id]}");
         }
 
-        static void SearchByName(string[] names, string[] positions)
+        static void SearchBySecondName(string[] names, string[] positions)
         {
-            int[] findedEmployees = new int[0];
             bool find = false;
-            string chekName = string.Empty;
-            int countCoincides = 0;
+            string chekSecondName = string.Empty;
 
             Console.WriteLine("Поиск по имени:");
-            string searchName = Console.ReadLine();
+            string searchSecondName = Console.ReadLine();
 
-            searchName = searchName.ToLower();
-            int coincides = searchName.Length;
+            searchSecondName = searchSecondName.ToLower();
+            int coincides = searchSecondName.Length;
 
             for (int i = 0; i < names.Length; i++)
             {
-                find = false;
-                chekName = names[i];
-                chekName = chekName.ToLower();
+                chekSecondName = names[i].Split(' ')[0];
+                chekSecondName = chekSecondName.ToLower();
 
-                for (int j = 0; j < chekName.Length; j++)
+                if (chekSecondName == searchSecondName)
                 {
-                    if (chekName[j] == searchName[0])
-                    {
-                        countCoincides = 0;
-
-                        for (int k = 0; k < searchName.Length; k++)
-                        {
-                            if (chekName.Length > j + k)
-                            {
-                                if (chekName[j + k] == searchName[k])
-                                    countCoincides++;
-                                else if (chekName[j + k] != searchName[k])
-                                    countCoincides = 0;
-                            }
-                        }
-
-                        if (countCoincides == coincides)
-                            find = true;
-                    }
-                }
-
-                if (find)
+                    find = true;
                     ShowArrayByID(i, names, positions);
+                }
             }
 
             if (find == false)
