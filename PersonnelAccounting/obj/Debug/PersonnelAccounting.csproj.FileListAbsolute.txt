@@ -1,0 +1,8 @@
+C:\Users\c5281\Documents\GitHub\MixiIJuniorTasks\PersonnelAccounting\obj\Debug\PersonnelAccounting.csproj.AssemblyReference.cache
+C:\Users\c5281\Documents\GitHub\MixiIJuniorTasks\PersonnelAccounting\obj\Debug\PersonnelAccounting.csproj.SuggestedBindingRedirects.cache
+C:\Users\c5281\Documents\GitHub\MixiIJuniorTasks\PersonnelAccounting\obj\Debug\PersonnelAccounting.csproj.CoreCompileInputs.cache
+C:\Users\c5281\Documents\GitHub\MixiIJuniorTasks\PersonnelAccounting\bin\Debug\PersonnelAccounting.exe.config
+C:\Users\c5281\Documents\GitHub\MixiIJuniorTasks\PersonnelAccounting\bin\Debug\PersonnelAccounting.exe
+C:\Users\c5281\Documents\GitHub\MixiIJuniorTasks\PersonnelAccounting\bin\Debug\PersonnelAccounting.pdb
+C:\Users\c5281\Documents\GitHub\MixiIJuniorTasks\PersonnelAccounting\obj\Debug\PersonnelAccounting.exe
+C:\Users\c5281\Documents\GitHub\MixiIJuniorTasks\PersonnelAccounting\obj\Debug\PersonnelAccounting.pdb

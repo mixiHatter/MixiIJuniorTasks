@@ -14,11 +14,11 @@ namespace KansasCityShuffle
             for (int i = 0; i < numbers.Length; i++)
                 numbers[i] = random.Next(minRange, maxRange);
 
-            ArrayOutput(numbers);
+            ShowNumbers(numbers);
 
             Shuffle(numbers);
 
-            ArrayOutput(numbers);
+            ShowNumbers(numbers);
         }
 
         static void Shuffle(int[] numbers)
@@ -38,7 +38,7 @@ namespace KansasCityShuffle
             }
         }
 
-        static void ArrayOutput(int[] array)
+        static void ShowNumbers(int[] array)
         {
             foreach (int piece in array)
                 Console.Write(piece + ",");
