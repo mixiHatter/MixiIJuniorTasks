@@ -60,6 +60,7 @@ namespace PersonnelAccounting
                 }
             }
         }
+        
         static void AddingDossier(ref string[] names, ref string[] positions)
         {
             Console.WriteLine("Введите ФИО сотрудника: ");
