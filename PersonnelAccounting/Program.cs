@@ -27,11 +27,11 @@ namespace PersonnelAccounting
             while (isWork)
             {
                 Console.Clear();
-                Console.Write("Добавить досье - 1" +
-                              "\nПоказать все досье - 2" +
-                              "\nУдалить досье - 3" +
-                              "\nИскать по фамилии - 4" +
-                              "\nВыход - 5\n");
+                Console.Write($"Добавить досье - {AddDossier}" +
+                              $"\nПоказать все досье - {ShowAllDossier}" +
+                              $"\nУдалить досье - {DeleteDossier}" +
+                              $"\nИскать по фамилии - {SearchByLastName}" +
+                              $"\nВыход - {Exit}\n");
 
                 Console.Write("\nВведите команду: ");
                 userInput = ReadInt(Console.ReadLine());
@@ -69,7 +69,7 @@ namespace PersonnelAccounting
             positions = ExpandArray(positions, Console.ReadLine());
 
             Console.WriteLine($"Сотрудник добавлен:");
-            Console.WriteLine(ShowArrayByID(names.Length - 1, names, positions));
+            ShowArrayByID(names.Length - 1, names, positions);
             Console.ReadKey();
         }
 
@@ -101,46 +101,32 @@ namespace PersonnelAccounting
             return array;
         }
 
-        static int[] ExpandArray(int[] array, int text)
-        {
-            int[] arrayExtension = new int[array.Length + 1];
-
-            for (int i = 0; i < array.Length; i++)
-                arrayExtension[i] = array[i];
-
-            arrayExtension[array.Length] = text;
-            array = arrayExtension;
-
-            return array;
-        }
-
         static void ShowAllArray(string[] firstArray, string[] secondArray)
         {
             Console.WriteLine("Список сотрудников:");
 
-            for (int i = 0; i < firstArray.Length; ++i)
-                Console.WriteLine($"{i + 1} | {firstArray[i]} - {secondArray[i]}");
+            if(firstArray.Length <= 0)
+            {
+                Console.WriteLine("Пусто");
+            }
+            else
+            {
+                for (int i = 0; i < firstArray.Length; ++i)
+                    ShowArrayByID(i, firstArray, secondArray);
+            }
 
             Console.ReadKey();
         }
 
-        static void ShowArrayByID(int[] arrayID, string[] firstArray, string[] secondArray)
+        static void ShowArrayByID(int id, string[] firstArray, string[] secondArray)
         {
-            for (int i = 0; i < arrayID.Length; i++)
-                Console.WriteLine($"{arrayID[i] + 1} | {firstArray[arrayID[i]]} - {secondArray[arrayID[i]]}");
-        }
-
-        static string ShowArrayByID(int id, string[] firstArray, string[] secondArray)
-        {
-            string text = id + 1 + " | " + firstArray[id] + " - " + secondArray[id];
-
-            return text;
+            Console.WriteLine($"{id + 1} | {firstArray[id]} - {secondArray[id]}");
         }
 
         static void SearchByName(string[] names, string[] positions)
         {
             int[] findedEmployees = new int[0];
-            bool find;
+            bool find = false;
             string chekName = string.Empty;
             int countCoincides = 0;
 
@@ -179,12 +165,10 @@ namespace PersonnelAccounting
                 }
 
                 if (find)
-                    findedEmployees = ExpandArray(findedEmployees, i);
+                    ShowArrayByID(i, names, positions);
             }
 
-            if (findedEmployees.Length > 0)
-                ShowArrayByID(findedEmployees, names, positions);
-            else
+            if (find == false)
                 Console.WriteLine("Ничего не найдено.");
 
             Console.ReadKey();
@@ -199,14 +183,11 @@ namespace PersonnelAccounting
 
             if (id >= 0 && id < names.Length)
             {
-                Console.WriteLine($"Успешно удалено:\n {ShowArrayByID(id, names, positions)}");
+                Console.WriteLine($"Успешно удалено:\n");
+                ShowArrayByID(id, names, positions);
 
-                names = MovingToEndOfArray(id, names);
-                positions = MovingToEndOfArray(id, positions);
-
-                names = DeleteLastCellOfArray(names);
-                positions = DeleteLastCellOfArray(positions);
-
+                names = RemoveElement(id, names);
+                positions = RemoveElement(id, positions);
             }
             else
             {
@@ -238,6 +219,14 @@ namespace PersonnelAccounting
                 bufer[i] = array[i];
 
             array = bufer;
+
+            return array;
+        }
+
+        static string[] RemoveElement(int id, string[] array)
+        {
+            array = MovingToEndOfArray(id, array);
+            array = DeleteLastCellOfArray(array);
 
             return array;
         }

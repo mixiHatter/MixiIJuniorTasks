@@ -1,4 +1,5 @@
 ﻿using System;
+using System.ComponentModel;
 
 namespace Tests
 {
@@ -8,6 +9,12 @@ namespace Tests
         {
             string[] array1 = new string[] {"1", "2", "3"};
             string[] array2 = new string[] { "A", "B", "C" };
+            string text = "The";
+
+            array2 = text.Split(null);
+
+            foreach (string item in array2)
+                Console.WriteLine(item + ",");
         }
     }
 }
