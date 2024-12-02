@@ -1,0 +1,8 @@
+C:\Users\c5281\Documents\GitHub\MixiIJuniorTasks\BraveNewWorld\bin\Debug\BraveNewWorld.exe.config
+C:\Users\c5281\Documents\GitHub\MixiIJuniorTasks\BraveNewWorld\bin\Debug\BraveNewWorld.exe
+C:\Users\c5281\Documents\GitHub\MixiIJuniorTasks\BraveNewWorld\bin\Debug\BraveNewWorld.pdb
+C:\Users\c5281\Documents\GitHub\MixiIJuniorTasks\BraveNewWorld\obj\Debug\BraveNewWorld.csproj.AssemblyReference.cache
+C:\Users\c5281\Documents\GitHub\MixiIJuniorTasks\BraveNewWorld\obj\Debug\BraveNewWorld.csproj.SuggestedBindingRedirects.cache
+C:\Users\c5281\Documents\GitHub\MixiIJuniorTasks\BraveNewWorld\obj\Debug\BraveNewWorld.csproj.CoreCompileInputs.cache
+C:\Users\c5281\Documents\GitHub\MixiIJuniorTasks\BraveNewWorld\obj\Debug\BraveNewWorld.exe
+C:\Users\c5281\Documents\GitHub\MixiIJuniorTasks\BraveNewWorld\obj\Debug\BraveNewWorld.pdb

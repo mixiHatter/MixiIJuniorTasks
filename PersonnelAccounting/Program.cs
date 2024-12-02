@@ -19,8 +19,8 @@ namespace PersonnelAccounting
             const int SearchByLastName = 4;
             const int Exit = 5;
 
-            string[] FullNamesOfEmployees = new string[0];
-            string[] PositionsOfEmployees = new string[0];
+            string[] fullNamesOfEmployees = new string[0];
+            string[] positionsOfEmployees = new string[0];
             bool isWork = true;
             int userInput;
 
@@ -39,36 +39,19 @@ namespace PersonnelAccounting
                 switch (userInput)
                 {
                     case AddDossier:
-                        Console.WriteLine("Введите ФИО сотрудника: ");
-                        ExpandArray(ref FullNamesOfEmployees, Console.ReadLine());
-
-                        Console.WriteLine("Введите должность сотрудника: ");
-                        ExpandArray(ref PositionsOfEmployees, Console.ReadLine());
+                        AddingDossier(ref fullNamesOfEmployees, ref positionsOfEmployees);
                         break;
 
                     case ShowAllDossier:
-                        Console.WriteLine("Список сотрудников:");
-                        ShowAllArray(FullNamesOfEmployees, PositionsOfEmployees);
-
-                        Console.ReadKey();
+                        ShowAllArray(fullNamesOfEmployees, positionsOfEmployees);
                         break;
 
                     case DeleteDossier:
-                        Console.WriteLine("Введите id удаляемого досье: ");
-                        userInput = ReadInt(Console.ReadLine());
-
-                        DeleteDossierByID(userInput, ref FullNamesOfEmployees, ref PositionsOfEmployees);
-
-                        Console.ReadKey();
+                        DeleteDossierByID(ref fullNamesOfEmployees, ref positionsOfEmployees);
                         break;
 
                     case SearchByLastName:
-                        Console.WriteLine("Поиск по имени:");
-                        SearchByName(FullNamesOfEmployees, Console.ReadLine(), out int[] findedEmpoyes);
-
-                        ShowArrayByID(findedEmpoyes, FullNamesOfEmployees, PositionsOfEmployees);
-
-                        Console.ReadKey();
+                        SearchByName(fullNamesOfEmployees, positionsOfEmployees);
                         break;
 
                     case Exit:
@@ -77,15 +60,22 @@ namespace PersonnelAccounting
                 }
             }
         }
+        static void AddingDossier(ref string[] names, ref string[] positions)
+        {
+            Console.WriteLine("Введите ФИО сотрудника: ");
+            names = ExpandArray(names, Console.ReadLine());
 
-        /// <summary>
-        /// пробует перевести text в int, возвращает int, при провале просит повторно ввести text.
-        /// </summary>
-        /// <param name="text"></param>
-        /// <returns></returns>
+            Console.WriteLine("Введите должность сотрудника: ");
+            positions = ExpandArray(positions, Console.ReadLine());
+
+            Console.WriteLine($"Сотрудник добавлен:");
+            Console.WriteLine(ShowArrayByID(names.Length - 1, names, positions));
+            Console.ReadKey();
+        }
+
         static int ReadInt(string text)
         {
-            bool result = int.TryParse(text, out var convertNumber);
+            bool result = int.TryParse(text, out int convertNumber);
 
             while (result == false)
             {
@@ -98,68 +88,48 @@ namespace PersonnelAccounting
             return convertNumber;
         }
 
-        /// <summary>
-        /// увеличивает массив string[] на ячейку и добавляет в неё содержимое string из text
-        /// </summary>
-        /// <param name="array"></param>
-        /// <param name="text"></param>
-        static void ExpandArray(ref string[] array, string text)
+        static string[] ExpandArray(string[] array, string text)
         {
             string[] arrayExtension = new string[array.Length + 1];
 
             for (int i = 0; i < array.Length; i++)
-            {
                 arrayExtension[i] = array[i];
-            }
 
             arrayExtension[array.Length] = text;
             array = arrayExtension;
+
+            return array;
         }
 
-        /// <summary>
-        /// увеличивает массив int[] на ячейку и добавляет в неё содержимое int из text
-        /// </summary>
-        /// <param name="array"></param>
-        /// <param name="text"></param>
-        static void ExpandArray(ref int[] array, int text)
+        static int[] ExpandArray(int[] array, int text)
         {
             int[] arrayExtension = new int[array.Length + 1];
 
             for (int i = 0; i < array.Length; i++)
-            {
                 arrayExtension[i] = array[i];
-            }
 
             arrayExtension[array.Length] = text;
             array = arrayExtension;
+
+            return array;
         }
 
-        /// <summary>
-        /// форматированный вывод в консоль двух списков string[] вида: "id | firstArray - secondArray"
-        /// </summary>
-        /// <param name="firstArray"></param>
-        /// <param name="secondArray"></param>
         static void ShowAllArray(string[] firstArray, string[] secondArray)
         {
+            Console.WriteLine("Список сотрудников:");
+
             for (int i = 0; i < firstArray.Length; ++i)
-            {
                 Console.WriteLine($"{i + 1} | {firstArray[i]} - {secondArray[i]}");
-            }
+
+            Console.ReadKey();
         }
 
-        /// <summary>
-        /// форматированный вывод в консоль двух списков string[] с адресами из списка int[] arrayID вида: "id | firstArray - secondArray"
-        /// </summary>
-        /// <param name="arrayID"></param>
-        /// <param name="firstArray"></param>
-        /// <param name="secondArray"></param>
         static void ShowArrayByID(int[] arrayID, string[] firstArray, string[] secondArray)
         {
             for (int i = 0; i < arrayID.Length; i++)
-            {
                 Console.WriteLine($"{arrayID[i] + 1} | {firstArray[arrayID[i]]} - {secondArray[arrayID[i]]}");
-            }
         }
+
         static string ShowArrayByID(int id, string[] firstArray, string[] secondArray)
         {
             string text = id + 1 + " | " + firstArray[id] + " - " + secondArray[id];
@@ -167,21 +137,18 @@ namespace PersonnelAccounting
             return text;
         }
 
-        /// <summary>
-        /// поиск 100% совпадения searchName в списке names. Возвращает список совпадений int[] findedEmployees
-        /// </summary>
-        /// <param name="names"></param>
-        /// <param name="searchName"></param>
-        /// <param name="findedEmployees"></param>
-        /// <returns></returns>
-        static int[] SearchByName(string[] names, string searchName, out int[] findedEmployees)
+        static void SearchByName(string[] names, string[] positions)
         {
-            findedEmployees = new int[0];
+            int[] findedEmployees = new int[0];
             bool find;
             string chekName = string.Empty;
+            int countCoincides = 0;
+
+            Console.WriteLine("Поиск по имени:");
+            string searchName = Console.ReadLine();
+
             searchName = searchName.ToLower();
             int coincides = searchName.Length;
-            int countСoincides = 0;
 
             for (int i = 0; i < names.Length; i++)
             {
@@ -193,56 +160,63 @@ namespace PersonnelAccounting
                 {
                     if (chekName[j] == searchName[0])
                     {
-                        countСoincides = 0;
+                        countCoincides = 0;
 
                         for (int k = 0; k < searchName.Length; k++)
                         {
                             if (chekName.Length > j + k)
                             {
                                 if (chekName[j + k] == searchName[k])
-                                    countСoincides++;
+                                    countCoincides++;
                                 else if (chekName[j + k] != searchName[k])
-                                    countСoincides = 0;
+                                    countCoincides = 0;
                             }
                         }
 
-                        if (countСoincides == coincides)
+                        if (countCoincides == coincides)
                             find = true;
                     }
                 }
 
                 if (find)
-                    ExpandArray(ref findedEmployees, i);
+                    findedEmployees = ExpandArray(findedEmployees, i);
             }
-            return findedEmployees;
+
+            if (findedEmployees.Length > 0)
+                ShowArrayByID(findedEmployees, names, positions);
+            else
+                Console.WriteLine("Ничего не найдено.");
+
+            Console.ReadKey();
         }
 
-        static void DeleteDossierByID(int id, ref string[] names, ref string[] positions)
+        static void DeleteDossierByID(ref string[] names, ref string[] positions)
         {
+            Console.WriteLine("Введите id удаляемого досье: ");
+            int id = ReadInt(Console.ReadLine());
+
             id--;
 
             if (id >= 0 && id < names.Length)
             {
                 Console.WriteLine($"Успешно удалено:\n {ShowArrayByID(id, names, positions)}");
 
-                MovingToEndOfArray(id, ref names);
-                MovingToEndOfArray(id, ref positions);
+                names = MovingToEndOfArray(id, names);
+                positions = MovingToEndOfArray(id, positions);
 
-                DeleteLastCellOfArray(ref names);
-                DeleteLastCellOfArray(ref positions);
+                names = DeleteLastCellOfArray(names);
+                positions = DeleteLastCellOfArray(positions);
+
             }
             else
             {
                 Console.WriteLine("Введено неверное id");
             }
+
+            Console.ReadKey();
         }
 
-        /// <summary>
-        /// сдвигает ячейку array[id] в конец массива
-        /// </summary>
-        /// <param name="id"></param>
-        /// <param name="array"></param>
-        static void MovingToEndOfArray(int id, ref string[] array)
+        static string[] MovingToEndOfArray(int id, string[] array)
         {
             string bufer;
 
@@ -252,13 +226,11 @@ namespace PersonnelAccounting
                 array[i] = array[i + 1];
                 array[i + 1] = bufer;
             }
+
+            return array;
         }
 
-        /// <summary>
-        /// Буферезует массив и укорачивает его на 1 ячейку с конца.
-        /// </summary>
-        /// <param name="array"></param>
-        static void DeleteLastCellOfArray(ref string[] array)
+        static string[] DeleteLastCellOfArray(string[] array)
         {
             string[] bufer = new string[array.Length - 1];
 
@@ -266,6 +238,8 @@ namespace PersonnelAccounting
                 bufer[i] = array[i];
 
             array = bufer;
+
+            return array;
         }
     }
 }
