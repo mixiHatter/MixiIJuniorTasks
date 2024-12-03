@@ -1,11 +1,4 @@
 ﻿using System;
-using System.IO;
-using System.Net.NetworkInformation;
-using System.Reflection;
-using System.Runtime.Remoting.Messaging;
-using System.Security.Cryptography;
-using System.Xml.Linq;
-using static System.Net.Mime.MediaTypeNames;
 
 namespace PersonnelAccounting
 {
@@ -39,7 +32,7 @@ namespace PersonnelAccounting
                 switch (userInput)
                 {
                     case AddDossier:
-                        AddingDossier(ref fullNamesOfEmployees, ref positionsOfEmployees);
+                        Program.AddDossier(ref fullNamesOfEmployees, ref positionsOfEmployees);
                         break;
 
                     case ShowAllDossier:
@@ -61,7 +54,7 @@ namespace PersonnelAccounting
             }
         }
         
-        static void AddingDossier(ref string[] names, ref string[] positions)
+        static void AddDossier(ref string[] names, ref string[] positions)
         {
             Console.WriteLine("Введите ФИО сотрудника: ");
             names = ExpandArray(names, Console.ReadLine());
@@ -76,13 +69,13 @@ namespace PersonnelAccounting
 
         static int ReadInt(string text)
         {
-            bool result = int.TryParse(text, out int convertNumber);
+            bool isNumber = int.TryParse(text, out int convertNumber);
 
-            while (result == false)
+            while (isNumber == false)
             {
                 Console.WriteLine("Введите повторно:");
 
-                result = int.TryParse(Console.ReadLine(), out var number);
+                isNumber = int.TryParse(Console.ReadLine(), out var number);
                 convertNumber = number;
             }
 
@@ -126,14 +119,12 @@ namespace PersonnelAccounting
 
         static void SearchBySecondName(string[] names, string[] positions)
         {
-            bool find = false;
+            bool haveFind = false;
             string chekSecondName = string.Empty;
 
             Console.WriteLine("Поиск по имени:");
             string searchSecondName = Console.ReadLine();
-
             searchSecondName = searchSecondName.ToLower();
-            int coincides = searchSecondName.Length;
 
             for (int i = 0; i < names.Length; i++)
             {
@@ -142,12 +133,12 @@ namespace PersonnelAccounting
 
                 if (chekSecondName == searchSecondName)
                 {
-                    find = true;
+                    haveFind = true;
                     ShowArrayByID(i, names, positions);
                 }
             }
 
-            if (find == false)
+            if (haveFind == false)
                 Console.WriteLine("Ничего не найдено.");
 
             Console.ReadKey();
@@ -176,7 +167,7 @@ namespace PersonnelAccounting
             Console.ReadKey();
         }
 
-        static string[] MovingToEndOfArray(int id, string[] array)
+        static string[] MoveToEndOfArray(int id, string[] array)
         {
             string bufer;
 
@@ -204,7 +195,7 @@ namespace PersonnelAccounting
 
         static string[] RemoveElement(int id, string[] array)
         {
-            array = MovingToEndOfArray(id, array);
+            array = MoveToEndOfArray(id, array);
             array = DeleteLastCellOfArray(array);
 
             return array;
