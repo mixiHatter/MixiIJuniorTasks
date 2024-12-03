@@ -6,9 +6,9 @@ namespace PersonnelAccounting
     {
         static void Main(string[] args)
         {
-            const int AddDossier = 1;
-            const int ShowAllDossier = 2;
-            const int DeleteDossier = 3;
+            const int SupplementDossier = 1;
+            const int DossierOutput = 2;
+            const int DeductionDossier = 3;
             const int SearchBySecondName = 4;
             const int Exit = 5;
 
@@ -20,9 +20,9 @@ namespace PersonnelAccounting
             while (isWork)
             {
                 Console.Clear();
-                Console.Write($"Добавить досье - {AddDossier}" +
-                              $"\nПоказать все досье - {ShowAllDossier}" +
-                              $"\nУдалить досье - {DeleteDossier}" +
+                Console.Write($"Добавить досье - {SupplementDossier}" +
+                              $"\nПоказать все досье - {DossierOutput}" +
+                              $"\nУдалить досье - {DeductionDossier}" +
                               $"\nИскать по фамилии - {SearchBySecondName}" +
                               $"\nВыход - {Exit}\n");
 
@@ -31,20 +31,20 @@ namespace PersonnelAccounting
 
                 switch (userInput)
                 {
-                    case AddDossier:
-                        Program.AddDossier(ref fullNamesOfEmployees, ref positionsOfEmployees);
+                    case SupplementDossier:
+                        AddDossier(ref fullNamesOfEmployees, ref positionsOfEmployees);
                         break;
 
-                    case ShowAllDossier:
-                        ShowAllArray(fullNamesOfEmployees, positionsOfEmployees);
+                    case DossierOutput:
+                        ShowAllDossiers(fullNamesOfEmployees, positionsOfEmployees);
                         break;
 
-                    case DeleteDossier:
-                        DeleteDossierByID(ref fullNamesOfEmployees, ref positionsOfEmployees);
+                    case DeductionDossier:
+                        DeleteDossier(ref fullNamesOfEmployees, ref positionsOfEmployees);
                         break;
 
                     case SearchBySecondName:
-                        Program.SearchBySecondName(fullNamesOfEmployees, positionsOfEmployees);
+                        LookBySecondName(fullNamesOfEmployees, positionsOfEmployees);
                         break;
 
                     case Exit:
@@ -57,13 +57,13 @@ namespace PersonnelAccounting
         static void AddDossier(ref string[] names, ref string[] positions)
         {
             Console.WriteLine("Введите ФИО сотрудника: ");
-            names = ExpandArray(names, Console.ReadLine());
+            names = AddData(names, Console.ReadLine());
 
             Console.WriteLine("Введите должность сотрудника: ");
-            positions = ExpandArray(positions, Console.ReadLine());
+            positions = AddData(positions, Console.ReadLine());
 
             Console.WriteLine($"Сотрудник добавлен:");
-            ShowArrayByID(names.Length - 1, names, positions);
+            ShowArrayByIndex(names.Length - 1, names, positions);
             Console.ReadKey();
         }
 
@@ -82,7 +82,7 @@ namespace PersonnelAccounting
             return convertNumber;
         }
 
-        static string[] ExpandArray(string[] array, string text)
+        static string[] AddData(string[] array, string text)
         {
             string[] arrayExtension = new string[array.Length + 1];
 
@@ -95,7 +95,7 @@ namespace PersonnelAccounting
             return array;
         }
 
-        static void ShowAllArray(string[] firstArray, string[] secondArray)
+        static void ShowAllDossiers(string[] firstArray, string[] secondArray)
         {
             Console.WriteLine("Список сотрудников:");
 
@@ -106,35 +106,35 @@ namespace PersonnelAccounting
             else
             {
                 for (int i = 0; i < firstArray.Length; ++i)
-                    ShowArrayByID(i, firstArray, secondArray);
+                    ShowArrayByIndex(i, firstArray, secondArray);
             }
 
             Console.ReadKey();
         }
 
-        static void ShowArrayByID(int id, string[] firstArray, string[] secondArray)
+        static void ShowArrayByIndex(int index, string[] firstArray, string[] secondArray)
         {
-            Console.WriteLine($"{id + 1} | {firstArray[id]} - {secondArray[id]}");
+            Console.WriteLine($"{index + 1} | {firstArray[index]} - {secondArray[index]}");
         }
 
-        static void SearchBySecondName(string[] names, string[] positions)
+        static void LookBySecondName(string[] names, string[] positions)
         {
             bool haveFind = false;
-            string chekSecondName = string.Empty;
+            string SecondNameEmployee = string.Empty;
 
-            Console.WriteLine("Поиск по имени:");
-            string searchSecondName = Console.ReadLine();
-            searchSecondName = searchSecondName.ToLower();
+            Console.WriteLine("Поиск по фамилии:");
+            string userSecondName = Console.ReadLine();
+            userSecondName = userSecondName.ToLower();
 
             for (int i = 0; i < names.Length; i++)
             {
-                chekSecondName = names[i].Split(' ')[0];
-                chekSecondName = chekSecondName.ToLower();
+                SecondNameEmployee = names[i].Split(' ')[0];
+                SecondNameEmployee = SecondNameEmployee.ToLower();
 
-                if (chekSecondName == searchSecondName)
+                if (SecondNameEmployee == userSecondName)
                 {
                     haveFind = true;
-                    ShowArrayByID(i, names, positions);
+                    ShowArrayByIndex(i, names, positions);
                 }
             }
 
@@ -144,34 +144,34 @@ namespace PersonnelAccounting
             Console.ReadKey();
         }
 
-        static void DeleteDossierByID(ref string[] names, ref string[] positions)
+        static void DeleteDossier(ref string[] names, ref string[] positions)
         {
-            Console.WriteLine("Введите id удаляемого досье: ");
-            int id = ReadInt(Console.ReadLine());
+            Console.WriteLine("Введите порядковый номер удаляемого досье: ");
+            int index = ReadInt(Console.ReadLine());
 
-            id--;
+            index--;
 
-            if (id >= 0 && id < names.Length)
+            if (index >= 0 && index < names.Length)
             {
                 Console.WriteLine($"Успешно удалено:\n");
-                ShowArrayByID(id, names, positions);
+                ShowArrayByIndex(index, names, positions);
 
-                names = RemoveElement(id, names);
-                positions = RemoveElement(id, positions);
+                names = RemoveElement(index, names);
+                positions = RemoveElement(index, positions);
             }
             else
             {
-                Console.WriteLine("Введено неверное id");
+                Console.WriteLine("Введен неверный номер.");
             }
 
             Console.ReadKey();
         }
 
-        static string[] MoveToEndOfArray(int id, string[] array)
+        static string[] MoveToEnd(int index, string[] array)
         {
             string bufer;
 
-            for (int i = id; i < array.Length - 1; i++)
+            for (int i = index; i < array.Length - 1; i++)
             {
                 bufer = array[i];
                 array[i] = array[i + 1];
@@ -193,9 +193,9 @@ namespace PersonnelAccounting
             return array;
         }
 
-        static string[] RemoveElement(int id, string[] array)
+        static string[] RemoveElement(int index, string[] array)
         {
-            array = MoveToEndOfArray(id, array);
+            array = MoveToEnd(index, array);
             array = DeleteLastCellOfArray(array);
 
             return array;
