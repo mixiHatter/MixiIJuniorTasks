@@ -6,11 +6,11 @@ namespace PersonnelAccounting
     {
         static void Main(string[] args)
         {
-            const int SupplementDossier = 1;
-            const int DossierOutput = 2;
-            const int DeductionDossier = 3;
-            const int SearchBySecondName = 4;
-            const int Exit = 5;
+            const int SupplementDossierCommand = 1;
+            const int DossierOutputCommand = 2;
+            const int DeductionDossierCommand = 3;
+            const int SearchBySecondNameCommand = 4;
+            const int ExitCommand = 5;
 
             string[] fullNamesOfEmployees = new string[0];
             string[] positionsOfEmployees = new string[0];
@@ -20,34 +20,34 @@ namespace PersonnelAccounting
             while (isWork)
             {
                 Console.Clear();
-                Console.Write($"Добавить досье - {SupplementDossier}" +
-                              $"\nПоказать все досье - {DossierOutput}" +
-                              $"\nУдалить досье - {DeductionDossier}" +
-                              $"\nИскать по фамилии - {SearchBySecondName}" +
-                              $"\nВыход - {Exit}\n");
+                Console.Write($"Добавить досье - {SupplementDossierCommand}" +
+                              $"\nПоказать все досье - {DossierOutputCommand}" +
+                              $"\nУдалить досье - {DeductionDossierCommand}" +
+                              $"\nПоиск по фамилии - {SearchBySecondNameCommand}" +
+                              $"\nВыход - {ExitCommand}\n");
 
                 Console.Write("\nВведите команду: ");
                 userInput = ReadInt(Console.ReadLine());
 
                 switch (userInput)
                 {
-                    case SupplementDossier:
+                    case SupplementDossierCommand:
                         AddDossier(ref fullNamesOfEmployees, ref positionsOfEmployees);
                         break;
 
-                    case DossierOutput:
+                    case DossierOutputCommand:
                         ShowAllDossiers(fullNamesOfEmployees, positionsOfEmployees);
                         break;
 
-                    case DeductionDossier:
+                    case DeductionDossierCommand:
                         DeleteDossier(ref fullNamesOfEmployees, ref positionsOfEmployees);
                         break;
 
-                    case SearchBySecondName:
+                    case SearchBySecondNameCommand:
                         LookBySecondName(fullNamesOfEmployees, positionsOfEmployees);
                         break;
 
-                    case Exit:
+                    case ExitCommand:
                         isWork = false;
                         break;
                 }
@@ -128,7 +128,7 @@ namespace PersonnelAccounting
 
             for (int i = 0; i < names.Length; i++)
             {
-                SecondNameEmployee = names[i].Split(' ')[0];
+                SecondNameEmployee = names[i].Split()[0];
                 SecondNameEmployee = SecondNameEmployee.ToLower();
 
                 if (SecondNameEmployee == userSecondName)
@@ -167,7 +167,7 @@ namespace PersonnelAccounting
             Console.ReadKey();
         }
 
-        static string[] MoveToEnd(int index, string[] array)
+        static string[] MoveElementToEnd(int index, string[] array)
         {
             string bufer;
 
@@ -195,7 +195,7 @@ namespace PersonnelAccounting
 
         static string[] RemoveElement(int index, string[] array)
         {
-            array = MoveToEnd(index, array);
+            array = MoveElementToEnd(index, array);
             array = DeleteLastCellOfArray(array);
 
             return array;
