@@ -90,9 +90,8 @@ namespace PersonnelAccounting
                 arrayExtension[i] = array[i];
 
             arrayExtension[array.Length] = text;
-            array = arrayExtension;
 
-            return array;
+            return arrayExtension;
         }
 
         static void ShowAllDossiers(string[] firstArray, string[] secondArray)
@@ -188,9 +187,7 @@ namespace PersonnelAccounting
             for (int i = 0; i < bufer.Length; i++)
                 bufer[i] = array[i];
 
-            array = bufer;
-
-            return array;
+            return bufer;
         }
 
         static string[] RemoveElement(int index, string[] array)
