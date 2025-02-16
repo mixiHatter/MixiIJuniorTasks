@@ -6,3 +6,11 @@ C:\Users\c5281\Documents\GitHub\MixiIJuniorTasks\BraveNewWorld\obj\Debug\BraveNe
 C:\Users\c5281\Documents\GitHub\MixiIJuniorTasks\BraveNewWorld\obj\Debug\BraveNewWorld.csproj.CoreCompileInputs.cache
 C:\Users\c5281\Documents\GitHub\MixiIJuniorTasks\BraveNewWorld\obj\Debug\BraveNewWorld.exe
 C:\Users\c5281\Documents\GitHub\MixiIJuniorTasks\BraveNewWorld\obj\Debug\BraveNewWorld.pdb
+D:\Documents\GitHub\MixiIJuniorTasks\BraveNewWorld\bin\Debug\BraveNewWorld.exe.config
+D:\Documents\GitHub\MixiIJuniorTasks\BraveNewWorld\bin\Debug\BraveNewWorld.exe
+D:\Documents\GitHub\MixiIJuniorTasks\BraveNewWorld\bin\Debug\BraveNewWorld.pdb
+D:\Documents\GitHub\MixiIJuniorTasks\BraveNewWorld\obj\Debug\BraveNewWorld.csproj.AssemblyReference.cache
+D:\Documents\GitHub\MixiIJuniorTasks\BraveNewWorld\obj\Debug\BraveNewWorld.csproj.SuggestedBindingRedirects.cache
+D:\Documents\GitHub\MixiIJuniorTasks\BraveNewWorld\obj\Debug\BraveNewWorld.csproj.CoreCompileInputs.cache
+D:\Documents\GitHub\MixiIJuniorTasks\BraveNewWorld\obj\Debug\BraveNewWorld.exe
+D:\Documents\GitHub\MixiIJuniorTasks\BraveNewWorld\obj\Debug\BraveNewWorld.pdb
