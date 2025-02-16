@@ -91,49 +91,24 @@ namespace BraveNewWorld
         static int[] PlayerMove(char[,] mapActive, char wall, int[] playerPosition, ConsoleKeyInfo playerKey, ConsoleKeyInfo keyUp, ConsoleKeyInfo keyDown, ConsoleKeyInfo keyRight, ConsoleKeyInfo keyLeft)
         {
             bool barrierIsAbsent;
+            int[] newPlayerPosition = new int[2];
+            Array.Copy(playerPosition, newPlayerPosition, 2);
+
             if (playerKey == keyUp) 
-            {
-                playerPosition[0] = playerPosition[0] - 1;
-
-                barrierIsAbsent = WallCheck(mapActive, wall, playerPosition);
-
-                if (barrierIsAbsent == false)
-                {
-                    playerPosition[0] = playerPosition[0] + 1;
-                }
-            }
+                newPlayerPosition[0] = playerPosition[0] - 1;
             else if (playerKey == keyDown)
-            {
-                playerPosition[0] = playerPosition[0] + 1;
-
-                barrierIsAbsent = WallCheck(mapActive, wall, playerPosition);
-
-                if (barrierIsAbsent == false)
-                {
-                    playerPosition[0] = playerPosition[0] - 1;
-                }
-            }
+                newPlayerPosition[0] = playerPosition[0] + 1;
             else if (playerKey == keyLeft)
-            {
-                playerPosition[1] = playerPosition[1] + 1;
-
-                barrierIsAbsent = WallCheck(mapActive, wall, playerPosition);
-
-                if (barrierIsAbsent == false)
-                {
-                    playerPosition[1] = playerPosition[1] - 1;
-                }
-            }
+                newPlayerPosition[1] = playerPosition[1] + 1;
             else if (playerKey == keyRight)
+                newPlayerPosition[1] = playerPosition[1] - 1;
+
+            barrierIsAbsent = WallCheck(mapActive, wall, newPlayerPosition);
+
+            if (barrierIsAbsent)
             {
-                playerPosition[1] = playerPosition[1] - 1;
-
-                barrierIsAbsent = WallCheck(mapActive, wall, playerPosition);
-
-                if (barrierIsAbsent == false)
-                {
-                    playerPosition[1] = playerPosition[1] + 1;
-                }
+                playerPosition[0] = newPlayerPosition[0];
+                playerPosition[1] = newPlayerPosition[1];
             }
 
             return playerPosition;
@@ -142,10 +117,9 @@ namespace BraveNewWorld
         static bool WallCheck (char[,] mapActive, char wall, int[] playerPosition)
         {
             if (mapActive[playerPosition[0], playerPosition[1]] == wall)
-            {
                 return false;
-            }
-            else return true;
+
+            return true;
         }
         
     }
