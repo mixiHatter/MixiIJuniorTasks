@@ -19,7 +19,7 @@ namespace BraveNewWorld
                                       { '#', ' ', ' ', ' ', '#', ' ', ' ', ' ', '#', ' ', '#'},
                                       { '#', ' ', '#', ' ', '#', ' ', '#', ' ', '#', ' ', '#'},
                                       { '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#'}
-                                      }; 
+                                      };
             char[,] mapActive = new char[map.GetLength(0), map.GetLength(1)];
             int mapSize;
             char way = ' ';
@@ -51,7 +51,7 @@ namespace BraveNewWorld
             {
                 for (int j = 0; j < map.GetLength(0); j++)
                 {
-                    Console.Write(map[i,j]);
+                    Console.Write(map[i, j]);
                 }
 
                 Console.WriteLine();
@@ -70,7 +70,7 @@ namespace BraveNewWorld
             {
                 for (int j = 0; j < mapActive.GetLength(0); j++)
                 {
-                    if (mapActive[i,j] != wall && playerIsSpawn == false)
+                    if (mapActive[i, j] != wall && playerIsSpawn == false)
                     {
                         playerPosition[coordinateY] = i;
                         playerPosition[coordinateX] = j;
@@ -88,10 +88,10 @@ namespace BraveNewWorld
             int coordinateY = 0;
             int coordinateX = 1;
 
-            mapActive[playerPosition[coordinateY],playerPosition[coordinateX]] = newUnit;
+            mapActive[playerPosition[coordinateY], playerPosition[coordinateX]] = newUnit;
         }
 
-        static void PlayerKeyPressed (ref bool isPlaying, ConsoleKeyInfo playerKey, char[,] mapActive, char wall, char way, char player, ref int[] playerPosition)
+        static void PlayerKeyPressed(ref bool isPlaying, ConsoleKeyInfo playerKey, char[,] mapActive, char wall, char way, char player, ref int[] playerPosition)
         {
             const ConsoleKey CommandKeyUp = ConsoleKey.W;
             const ConsoleKey CommandKeyDown = ConsoleKey.S;
@@ -112,7 +112,7 @@ namespace BraveNewWorld
 
                     if (CanMove(mapActive, wall, newPlayerPosition))
                         PlayerMove(mapActive, player, way, playerPosition, newPlayerPosition, playerKey.Key);
-                    break; 
+                    break;
 
                 case CommandKeyDown:
                     newPlayerPosition[coordinateY] = playerPosition[coordinateY] + step;
@@ -161,7 +161,7 @@ namespace BraveNewWorld
             return playerPosition;
         }
 
-        static bool CanMove (char[,] mapActive, char wall, int[] playerPosition)
+        static bool CanMove(char[,] mapActive, char wall, int[] playerPosition)
         {
             int coordinateY = 0;
             int coordinateX = 1;
