@@ -1,0 +1,8 @@
+C:\Users\c5281\Documents\GitHub\MixiIJuniorTasks\ExplanatoryDictionary\bin\Debug\ExplanatoryDictionary.exe.config
+C:\Users\c5281\Documents\GitHub\MixiIJuniorTasks\ExplanatoryDictionary\bin\Debug\ExplanatoryDictionary.exe
+C:\Users\c5281\Documents\GitHub\MixiIJuniorTasks\ExplanatoryDictionary\bin\Debug\ExplanatoryDictionary.pdb
+C:\Users\c5281\Documents\GitHub\MixiIJuniorTasks\ExplanatoryDictionary\obj\Debug\ExplanatoryDictionary.csproj.AssemblyReference.cache
+C:\Users\c5281\Documents\GitHub\MixiIJuniorTasks\ExplanatoryDictionary\obj\Debug\ExplanatoryDictionary.csproj.SuggestedBindingRedirects.cache
+C:\Users\c5281\Documents\GitHub\MixiIJuniorTasks\ExplanatoryDictionary\obj\Debug\ExplanatoryDictionary.csproj.CoreCompileInputs.cache
+C:\Users\c5281\Documents\GitHub\MixiIJuniorTasks\ExplanatoryDictionary\obj\Debug\ExplanatoryDictionary.exe
+C:\Users\c5281\Documents\GitHub\MixiIJuniorTasks\ExplanatoryDictionary\obj\Debug\ExplanatoryDictionary.pdb
