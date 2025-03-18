@@ -1,13 +1,15 @@
 ﻿using System;
-using System.Diagnostics.Eventing.Reader;
 
 namespace BraveNewWorld
 {
     internal class Program
     {
+        static int coordinateY = 0;
+        static int coordinateX = 1;
+
         static void Main(string[] args)
         {
-            char[,] map = new char[,] {
+            char[,] staticMap = new char[,] {
                                       { '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#'},
                                       { '#', ' ', '#', ' ', ' ', ' ', '#', ' ', ' ', ' ', '#'},
                                       { '#', ' ', '#', ' ', '#', ' ', '#', ' ', '#', ' ', '#'},
@@ -17,39 +19,69 @@ namespace BraveNewWorld
                                       { '#', ' ', '#', ' ', '#', ' ', '#', ' ', '#', ' ', '#'},
                                       { '#', ' ', '#', ' ', '#', ' ', '#', ' ', '#', ' ', '#'},
                                       { '#', ' ', ' ', ' ', '#', ' ', ' ', ' ', '#', ' ', '#'},
-                                      { '#', ' ', '#', ' ', '#', ' ', '#', ' ', '#', ' ', '#'},
-                                      { '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#'}
-                                      };
-            char[,] mapActive = new char[map.GetLength(0), map.GetLength(1)];
-            int mapSize;
-            char way = ' ';
-            char player = '@';
-            char wall = '#';
-            int[] playerPosition;
-            bool isPlaying = true;
+                                      { '#', ' ', '#', ' ', '#', ' ', '#', ' ', '#', 'X', '#'},
+                                      { '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#'}};
 
-            mapSize = map.Length;
-            playerPosition = GetPositionToSpawnPlayer(map, wall);
-            Array.Copy(map, mapActive, mapSize);
+            int[] playerCoordinates = {0, 0};
+            bool isPlaying = true;
+            char wall = '#';
+            char player = '@';
+            char exit = 'X';
+
+            playerCoordinates = GetPositionToSpawnPlayer(staticMap, wall);
 
             while (isPlaying)
             {
+                GenerationActiveMap(staticMap, out char[,] dynamicMap);
+                Event(staticMap, playerCoordinates, exit, ref isPlaying);
+
                 Console.Clear();
+                
+                DrawPlayer(dynamicMap, playerCoordinates, player);
+                DrawMap(dynamicMap);
 
-                DrawUnit(mapActive, player, playerPosition);
-                ShowMap(mapActive);
-
-                ConsoleKeyInfo playerKey = Console.ReadKey();
-
-                PlayerKeyPressed(ref isPlaying, playerKey, mapActive, wall, way, player, ref playerPosition);
+                playerCoordinates = PlayerPressedKey(staticMap, playerCoordinates, wall, exit, Console.ReadKey(), ref isPlaying);
             }
         }
 
-        static void ShowMap(char[,] map)
+        static void GenerationActiveMap(char[,] map, out char[,] newMap)
         {
-            for (int i = 0; i < map.GetLength(1); i++)
+            char[,] generationMap = new char[map.GetLength(coordinateY), map.GetLength(coordinateX)];
+            Array.Copy(map, generationMap, map.Length);
+
+            newMap = generationMap;
+        }
+
+        static int[] GetPositionToSpawnPlayer(char[,] mapActive, char wall)
+        {
+            bool playerIsSpawn = false;
+            int[] playerPosition = new int[2];
+
+            if (playerIsSpawn == false)
             {
-                for (int j = 0; j < map.GetLength(0); j++)
+                for (int i = 0; i < mapActive.GetLength(coordinateX); i++)
+                {
+                    for (int j = 0; j < mapActive.GetLength(coordinateY); j++)
+                    {
+                        if (mapActive[i, j] != wall && playerIsSpawn == false)
+                        {
+                            playerPosition[coordinateY] = i;
+                            playerPosition[coordinateX] = j;
+
+                            playerIsSpawn = true;
+                        }
+                    }
+                }
+            }
+
+            return playerPosition;
+        }
+
+        static void DrawMap(char[,] map)
+        {
+            for (int i = 0; i < map.GetLength(coordinateX); i++)
+            {
+                for (int j = 0; j < map.GetLength(coordinateY); j++)
                 {
                     Console.Write(map[i, j]);
                 }
@@ -58,118 +90,71 @@ namespace BraveNewWorld
             }
         }
 
-        static int[] GetPositionToSpawnPlayer(char[,] mapActive, char wall)
+        static void DrawPlayer(char[,] map, int[] coordinates, char player)
         {
-            int coordinateY = 0;
-            int coordinateX = 1;
-
-            bool playerIsSpawn = false;
-            int[] playerPosition = new int[2];
-
-            for (int i = 0; i < mapActive.GetLength(1); i++)
-            {
-                for (int j = 0; j < mapActive.GetLength(0); j++)
-                {
-                    if (mapActive[i, j] != wall && playerIsSpawn == false)
-                    {
-                        playerPosition[coordinateY] = i;
-                        playerPosition[coordinateX] = j;
-
-                        playerIsSpawn = true;
-                    }
-                }
-            }
-
-            return playerPosition;
+            map[coordinates[coordinateY], coordinates[coordinateX]] = player;
         }
 
-        static void DrawUnit(char[,] mapActive, char newUnit, int[] playerPosition)
+        static bool CanMove(char[,] map, char wall, int[] playerCoordinates)
         {
-            int coordinateY = 0;
-            int coordinateX = 1;
+            bool can = false;
 
-            mapActive[playerPosition[coordinateY], playerPosition[coordinateX]] = newUnit;
+            if (map[playerCoordinates[coordinateY], playerCoordinates[coordinateX]] != wall)
+                can = true;
+            return can;
         }
 
-        static void PlayerKeyPressed(ref bool isPlaying, ConsoleKeyInfo playerKey, char[,] mapActive, char wall, char way, char player, ref int[] playerPosition)
+        static int[] PlayerPressedKey(char[,] map, int[] playerCoordinates, char wall, char exit, ConsoleKeyInfo playerKey, ref bool isPlaying)
         {
             const ConsoleKey CommandKeyUp = ConsoleKey.W;
             const ConsoleKey CommandKeyDown = ConsoleKey.S;
             const ConsoleKey CommandKeyLeft = ConsoleKey.A;
             const ConsoleKey CommandKeyRight = ConsoleKey.D;
+            const ConsoleKey CommandKeyEscape = ConsoleKey.Escape;
 
-            int coordinateY = 0;
-            int coordinateX = 1;
+            int[] nextPlayerCoordinates = new int[2];
+            Array.Copy(playerCoordinates, nextPlayerCoordinates, playerCoordinates.Length);
+
             int step = 1;
-
-            int[] newPlayerPosition = new int[2];
-            Array.Copy(playerPosition, newPlayerPosition, 2);
 
             switch (playerKey.Key)
             {
                 case CommandKeyUp:
-                    newPlayerPosition[coordinateY] = playerPosition[coordinateY] - step;
-
-                    if (CanMove(mapActive, wall, newPlayerPosition))
-                        PlayerMove(mapActive, player, way, playerPosition, newPlayerPosition, playerKey.Key);
+                    nextPlayerCoordinates[coordinateY] = nextPlayerCoordinates[coordinateY] - step;
                     break;
 
                 case CommandKeyDown:
-                    newPlayerPosition[coordinateY] = playerPosition[coordinateY] + step;
-
-                    if (CanMove(mapActive, wall, newPlayerPosition))
-                        PlayerMove(mapActive, player, way, playerPosition, newPlayerPosition, playerKey.Key);
+                    nextPlayerCoordinates[coordinateY] = nextPlayerCoordinates[coordinateY] + step;
                     break;
 
                 case CommandKeyLeft:
-                    newPlayerPosition[coordinateX] = playerPosition[coordinateX] - step;
-
-                    if (CanMove(mapActive, wall, newPlayerPosition))
-                        PlayerMove(mapActive, player, way, playerPosition, newPlayerPosition, playerKey.Key);
+                    nextPlayerCoordinates[coordinateX] = nextPlayerCoordinates[coordinateX] - step;
                     break;
 
                 case CommandKeyRight:
-                    newPlayerPosition[coordinateX] = playerPosition[coordinateX] + step;
-
-                    if (CanMove(mapActive, wall, newPlayerPosition))
-                        PlayerMove(mapActive, player, way, playerPosition, newPlayerPosition, playerKey.Key);
+                    nextPlayerCoordinates[coordinateX] = nextPlayerCoordinates[coordinateX] + step;
                     break;
 
-                case ConsoleKey.Escape:
+                case CommandKeyEscape:
                     isPlaying = false;
                     break;
-
-                default:
-                    break;
             }
+
+            if (CanMove(map, wall, nextPlayerCoordinates) == true)
+                playerCoordinates = nextPlayerCoordinates;
+
+            return playerCoordinates;
         }
 
-        static int[] PlayerMove(char[,] mapActive, char player, char way, int[] playerPosition, int[] newPlayerPosition, ConsoleKey playerKey)
+        static void Event (char[,] map, int[] playerCoordinates, char exit, ref bool isPlaying)
         {
-            int coordinateY = 0;
-            int coordinateX = 1;
-
-            DrawUnit(mapActive, way, playerPosition);
-
-            if (playerKey == ConsoleKey.W || playerKey == ConsoleKey.S)
-                playerPosition[coordinateY] = newPlayerPosition[coordinateY];
-            else if (playerKey == ConsoleKey.A || playerKey == ConsoleKey.D)
-                playerPosition[coordinateX] = newPlayerPosition[coordinateX];
-
-            DrawUnit(mapActive, player, playerPosition);
-
-            return playerPosition;
-        }
-
-        static bool CanMove(char[,] mapActive, char wall, int[] playerPosition)
-        {
-            int coordinateY = 0;
-            int coordinateX = 1;
-
-            if (mapActive[playerPosition[coordinateY], playerPosition[coordinateX]] == wall)
-                return false;
-
-            return true;
+            if (map[playerCoordinates[coordinateY], playerCoordinates[coordinateX]] == exit)
+            {
+                Console.Clear();
+                Console.WriteLine("Map completed!");
+                isPlaying = false;
+                Console.ReadKey();
+            }
         }
     }
 }
